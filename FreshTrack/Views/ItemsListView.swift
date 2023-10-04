@@ -2,14 +2,16 @@ import SwiftUI
 
 struct ItemsListView: View {
     @StateObject var dataRefrigeratorItems = DataRefrigeratorItems()
+    @StateObject var dataFridgeItems = DataFridgeItems()
+    @StateObject var dataPantryItems = DataPantryItems()
 
     var body: some View {
         VStack {
-            Button("testing") {
-                dataRefrigeratorItems.addItem(item: RefrigeratorItem(emoji: "🍔",itemName: "Hamburger",  dateAdded: "9/5/2023", days: 20))
+            Button("testing") { // Just testing can be removed
+                dataPantryItems.addItem(item: PantryItem(emoji: "🍔",itemName: "Hamburger",  dateAdded: Date(), days: 20))
             }
             List {
-                Section(header: Text("Fridge Items 🧊")) {
+                Section(header: Text("Refrigerator Items ❄️")) {
                     ForEach(dataRefrigeratorItems.items, id: \.self) { item in
                         RefrigeratorListRow(item: item)
                     }
@@ -17,9 +19,27 @@ struct ItemsListView: View {
                         dataRefrigeratorItems.deleteItem(indexSet: indexSet)
                     }
                 }
+                Section(header: Text("Fridge Items 🧊")) {
+                    ForEach(dataFridgeItems.items, id: \.self) { item in
+                        FridgeListRow(item: item)
+                    }
+                    .onDelete { indexSet in
+                        dataFridgeItems.deleteItem(indexSet: indexSet)
+                    }
+                }
+                
+                Section(header: Text("Pantry Items 🗄️")) {
+                    ForEach(dataPantryItems.items, id: \.self) { item in
+                        PantryListRow(item: item)
+                    }
+                    .onDelete { indexSet in
+                        dataPantryItems.deleteItem(indexSet: indexSet)
+                    }
+                }
             }
             .onAppear() {
-                dataRefrigeratorItems.getRefrigerator()
+                dataRefrigeratorItems.getRefrigeratorItems()
+                dataFridgeItems.getFridgeItems()
             }
         }
     }

@@ -13,7 +13,7 @@ class DataRefrigeratorItems: ObservableObject {
             saveItems()
         }
     }
-    func getRefrigerator(){
+    func getRefrigeratorItems(){
         guard let data = UserDefaults.standard.data(forKey: "Refrigerator_Items") else { return }
         guard let savedItems = try? JSONDecoder().decode([RefrigeratorItem].self, from: data) else { return }
         self.items = savedItems

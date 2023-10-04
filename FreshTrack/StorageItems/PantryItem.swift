@@ -1,12 +1,13 @@
 //
-//  RefrigeratorItem.swift
+//  PantryItem.swift
 //  FreshTrack
 //
-//  Created by Benjamin Faershtein on 10/2/23.
+//  Created by Benjamin Faershtein on 10/3/23.
 //
+
 import Foundation
 
-struct RefrigeratorItem: Identifiable, Hashable, Codable {
+struct PantryItem: Identifiable, Hashable, Codable {
     var id: UUID = UUID()
     var emoji: String
     var itemName: String
@@ -15,4 +16,3 @@ struct RefrigeratorItem: Identifiable, Hashable, Codable {
     
     
 }
-

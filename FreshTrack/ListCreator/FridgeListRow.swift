@@ -1,16 +1,16 @@
 //
-//  RefrigeratorListRow.swift
+//  FridgeListRow.swift
 //  FreshTrack
 //
-//  Created by Benjamin Faershtein on 10/2/23.
+//  Created by Benjamin Faershtein on 10/3/23.
 //
 
 import SwiftUI
 
-struct RefrigeratorListRow: View {
+struct FridgeListRow: View {
     let currentDate = Date()
     let calendar = Calendar.current
-    var item:RefrigeratorItem
+    var item:FridgeItem
 
     
     var daysLeft: Int {
@@ -40,9 +40,10 @@ struct RefrigeratorListRow: View {
     }
 }
 
-struct RefrigeratorListRow_Previews: PreviewProvider {
+struct FridgeListRow_preview: PreviewProvider {
     static var previews: some View {
 
-        RefrigeratorListRow(item: RefrigeratorItem(emoji: "🍔",itemName: "Hamburger",  dateAdded: Date(), days: 20))
+        FridgeListRow(item: FridgeItem(emoji: "🍔",itemName: "Hamburger",  dateAdded: Date(), days: 20))
     }
 }
+

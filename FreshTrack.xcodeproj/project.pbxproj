@@ -15,6 +15,12 @@
 		BC71A20B2ACBB2AA00FE413E /* RefrigeratorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A20A2ACBB2AA00FE413E /* RefrigeratorItem.swift */; };
 		BC71A20D2ACBB35900FE413E /* DataRefrigeratorItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A20C2ACBB35900FE413E /* DataRefrigeratorItems.swift */; };
 		BC71A2122ACBB45100FE413E /* RefrigeratorListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A2112ACBB45100FE413E /* RefrigeratorListRow.swift */; };
+		BC71A2162ACD1B3B00FE413E /* FridgeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A2152ACD1B3B00FE413E /* FridgeItem.swift */; };
+		BC71A2182ACD1B5E00FE413E /* DataFridgeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A2172ACD1B5E00FE413E /* DataFridgeItem.swift */; };
+		BC71A21A2ACD1C1C00FE413E /* FridgeListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A2192ACD1C1C00FE413E /* FridgeListRow.swift */; };
+		BC71A21C2ACD1E7700FE413E /* PantryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A21B2ACD1E7700FE413E /* PantryItem.swift */; };
+		BC71A21E2ACD1E9C00FE413E /* DataPantryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A21D2ACD1E9C00FE413E /* DataPantryItem.swift */; };
+		BC71A2202ACD1EED00FE413E /* PantryListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A21F2ACD1EED00FE413E /* PantryListRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +33,12 @@
 		BC71A20A2ACBB2AA00FE413E /* RefrigeratorItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefrigeratorItem.swift; sourceTree = "<group>"; };
 		BC71A20C2ACBB35900FE413E /* DataRefrigeratorItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRefrigeratorItems.swift; sourceTree = "<group>"; };
 		BC71A2112ACBB45100FE413E /* RefrigeratorListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefrigeratorListRow.swift; sourceTree = "<group>"; };
+		BC71A2152ACD1B3B00FE413E /* FridgeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeItem.swift; sourceTree = "<group>"; };
+		BC71A2172ACD1B5E00FE413E /* DataFridgeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFridgeItem.swift; sourceTree = "<group>"; };
+		BC71A2192ACD1C1C00FE413E /* FridgeListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeListRow.swift; sourceTree = "<group>"; };
+		BC71A21B2ACD1E7700FE413E /* PantryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryItem.swift; sourceTree = "<group>"; };
+		BC71A21D2ACD1E9C00FE413E /* DataPantryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPantryItem.swift; sourceTree = "<group>"; };
+		BC71A21F2ACD1EED00FE413E /* PantryListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryListRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +94,11 @@
 			isa = PBXGroup;
 			children = (
 				BC71A20A2ACBB2AA00FE413E /* RefrigeratorItem.swift */,
+				BC71A2152ACD1B3B00FE413E /* FridgeItem.swift */,
+				BC71A21B2ACD1E7700FE413E /* PantryItem.swift */,
 				BC71A20C2ACBB35900FE413E /* DataRefrigeratorItems.swift */,
+				BC71A2172ACD1B5E00FE413E /* DataFridgeItem.swift */,
+				BC71A21D2ACD1E9C00FE413E /* DataPantryItem.swift */,
 			);
 			path = StorageItems;
 			sourceTree = "<group>";
@@ -99,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				BC71A2112ACBB45100FE413E /* RefrigeratorListRow.swift */,
+				BC71A2192ACD1C1C00FE413E /* FridgeListRow.swift */,
+				BC71A21F2ACD1EED00FE413E /* PantryListRow.swift */,
 			);
 			path = ListCreator;
 			sourceTree = "<group>";
@@ -173,12 +191,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC71A2162ACD1B3B00FE413E /* FridgeItem.swift in Sources */,
+				BC71A2182ACD1B5E00FE413E /* DataFridgeItem.swift in Sources */,
 				BC71A2122ACBB45100FE413E /* RefrigeratorListRow.swift in Sources */,
 				BC71A20B2ACBB2AA00FE413E /* RefrigeratorItem.swift in Sources */,
 				BC71A20D2ACBB35900FE413E /* DataRefrigeratorItems.swift in Sources */,
+				BC71A21A2ACD1C1C00FE413E /* FridgeListRow.swift in Sources */,
 				BC71A1F72ACBAEB300FE413E /* FreshTrackApp.swift in Sources */,
 				BC71A2092ACBAFB100FE413E /* ItemsListView.swift in Sources */,
+				BC71A2202ACD1EED00FE413E /* PantryListRow.swift in Sources */,
+				BC71A21C2ACD1E7700FE413E /* PantryItem.swift in Sources */,
 				BC71A2072ACBAF7500FE413E /* MainNavBar.swift in Sources */,
+				BC71A21E2ACD1E9C00FE413E /* DataPantryItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
