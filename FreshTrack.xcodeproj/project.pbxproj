@@ -8,17 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		BC71A1F72ACBAEB300FE413E /* FreshTrackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A1F62ACBAEB300FE413E /* FreshTrackApp.swift */; };
-		BC71A1F92ACBAEB300FE413E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A1F82ACBAEB300FE413E /* ContentView.swift */; };
 		BC71A1FB2ACBAEB400FE413E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC71A1FA2ACBAEB400FE413E /* Assets.xcassets */; };
 		BC71A1FE2ACBAEB400FE413E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC71A1FD2ACBAEB400FE413E /* Preview Assets.xcassets */; };
+		BC71A2072ACBAF7500FE413E /* MainNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A2062ACBAF7500FE413E /* MainNavBar.swift */; };
+		BC71A2092ACBAFB100FE413E /* ItemsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A2082ACBAFB100FE413E /* ItemsListView.swift */; };
+		BC71A20B2ACBB2AA00FE413E /* RefrigeratorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A20A2ACBB2AA00FE413E /* RefrigeratorItem.swift */; };
+		BC71A20D2ACBB35900FE413E /* DataRefrigeratorItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A20C2ACBB35900FE413E /* DataRefrigeratorItems.swift */; };
+		BC71A2122ACBB45100FE413E /* RefrigeratorListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A2112ACBB45100FE413E /* RefrigeratorListRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BC71A1F32ACBAEB300FE413E /* FreshTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreshTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC71A1F62ACBAEB300FE413E /* FreshTrackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshTrackApp.swift; sourceTree = "<group>"; };
-		BC71A1F82ACBAEB300FE413E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BC71A1FA2ACBAEB400FE413E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC71A1FD2ACBAEB400FE413E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BC71A2062ACBAF7500FE413E /* MainNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavBar.swift; sourceTree = "<group>"; };
+		BC71A2082ACBAFB100FE413E /* ItemsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListView.swift; sourceTree = "<group>"; };
+		BC71A20A2ACBB2AA00FE413E /* RefrigeratorItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefrigeratorItem.swift; sourceTree = "<group>"; };
+		BC71A20C2ACBB35900FE413E /* DataRefrigeratorItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRefrigeratorItems.swift; sourceTree = "<group>"; };
+		BC71A2112ACBB45100FE413E /* RefrigeratorListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefrigeratorListRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +59,11 @@
 		BC71A1F52ACBAEB300FE413E /* FreshTrack */ = {
 			isa = PBXGroup;
 			children = (
+				BC71A2102ACBB43A00FE413E /* ListCreator */,
+				BC71A2042ACBAEE900FE413E /* StorageItems */,
+				BC71A2052ACBAF3900FE413E /* Views */,
 				BC71A1F62ACBAEB300FE413E /* FreshTrackApp.swift */,
-				BC71A1F82ACBAEB300FE413E /* ContentView.swift */,
+				BC71A2062ACBAF7500FE413E /* MainNavBar.swift */,
 				BC71A1FA2ACBAEB400FE413E /* Assets.xcassets */,
 				BC71A1FC2ACBAEB400FE413E /* Preview Content */,
 			);
@@ -65,6 +76,31 @@
 				BC71A1FD2ACBAEB400FE413E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BC71A2042ACBAEE900FE413E /* StorageItems */ = {
+			isa = PBXGroup;
+			children = (
+				BC71A20A2ACBB2AA00FE413E /* RefrigeratorItem.swift */,
+				BC71A20C2ACBB35900FE413E /* DataRefrigeratorItems.swift */,
+			);
+			path = StorageItems;
+			sourceTree = "<group>";
+		};
+		BC71A2052ACBAF3900FE413E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BC71A2082ACBAFB100FE413E /* ItemsListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BC71A2102ACBB43A00FE413E /* ListCreator */ = {
+			isa = PBXGroup;
+			children = (
+				BC71A2112ACBB45100FE413E /* RefrigeratorListRow.swift */,
+			);
+			path = ListCreator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +173,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC71A1F92ACBAEB300FE413E /* ContentView.swift in Sources */,
+				BC71A2122ACBB45100FE413E /* RefrigeratorListRow.swift in Sources */,
+				BC71A20B2ACBB2AA00FE413E /* RefrigeratorItem.swift in Sources */,
+				BC71A20D2ACBB35900FE413E /* DataRefrigeratorItems.swift in Sources */,
 				BC71A1F72ACBAEB300FE413E /* FreshTrackApp.swift in Sources */,
+				BC71A2092ACBAFB100FE413E /* ItemsListView.swift in Sources */,
+				BC71A2072ACBAF7500FE413E /* MainNavBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
