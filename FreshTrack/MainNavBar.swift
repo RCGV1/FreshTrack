@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct MainNavBar: View {
     var body: some View {
         TabView{
@@ -20,7 +21,6 @@ struct MainNavBar: View {
                     Image(systemName: "carrot")
                     Text("Test")
                 }
-            
         }
     
     }

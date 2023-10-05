@@ -1,52 +1,79 @@
 import SwiftUI
+import Foundation
+
 
 struct ItemsListView: View {
-    @StateObject var dataRefrigeratorItems = DataRefrigeratorItems()
+    
+    @StateObject var dataFreezerItems = DataFreezerItems()
     @StateObject var dataFridgeItems = DataFridgeItems()
     @StateObject var dataPantryItems = DataPantryItems()
+    //@Binding var enteredName: String
+    let contentView = ContentView(onAddItem: {})
+    
+    func addItemToList() {
+        dataFridgeItems.addItem(item: FridgeItem(emoji: "🍔",itemName: "Hamburger",  dateAdded: Date(), days: 20))
+        print(contentView.enteredName)
+    }
 
-    var body: some View {
-        VStack {
-            Button("testing") { // Just testing can be removed
-                dataPantryItems.addItem(item: PantryItem(emoji: "🍔",itemName: "Hamburger",  dateAdded: Date(), days: 20))
-            }
-            List {
-                Section(header: Text("Refrigerator Items ❄️")) {
-                    ForEach(dataRefrigeratorItems.items, id: \.self) { item in
-                        RefrigeratorListRow(item: item)
+        var body: some View {
+            NavigationView {
+                VStack {
+                    HStack {
+                        Text("Your Items")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                        Spacer()
+                        NavigationLink(destination:ContentView(onAddItem: addItemToList)) {
+                            Image(systemName: "plus")
+                                .font(.title)
+                            
+                                .cornerRadius(10)
+                        }
+                        .navigationBarTitleDisplayMode(.inline)
+                        
                     }
-                    .onDelete { indexSet in
-                        dataRefrigeratorItems.deleteItem(indexSet: indexSet)
+                    .padding()
+                    List {
+                        Section(header: Text("Freezer Items ❄️").fontWeight(.bold).font(.headline)) {
+                            ForEach(dataFreezerItems.items, id: \.self) { item in
+                                FreezerListRow(item: item)
+                            }
+                            .onDelete { indexSet in
+                                dataFreezerItems.deleteItem(indexSet: indexSet)
+                            }
+                        }
+                        Section(header: Text("Fridge Items 🧊").fontWeight(.bold).font(.headline)) {
+                            ForEach(dataFridgeItems.items, id: \.self) { item in
+                                FridgeListRow(item: item)
+                            }
+                            .onDelete { indexSet in
+                                dataFridgeItems.deleteItem(indexSet: indexSet)
+                            }
+                        }
+                        
+                        Section(header: Text("Pantry Items 🗄️").fontWeight(.bold).font(.headline)) {
+                            ForEach(dataPantryItems.items, id: \.self) { item in
+                                PantryListRow(item: item)
+                            }
+                            .onDelete { indexSet in
+                                dataPantryItems.deleteItem(indexSet: indexSet)
+                            }
+                        }
+                    }
+                    .onAppear() {
+                        dataFreezerItems.getFreezerItems()
+                        dataFridgeItems.getFridgeItems()
                     }
                 }
-                Section(header: Text("Fridge Items 🧊")) {
-                    ForEach(dataFridgeItems.items, id: \.self) { item in
-                        FridgeListRow(item: item)
-                    }
-                    .onDelete { indexSet in
-                        dataFridgeItems.deleteItem(indexSet: indexSet)
-                    }
-                }
-                
-                Section(header: Text("Pantry Items 🗄️")) {
-                    ForEach(dataPantryItems.items, id: \.self) { item in
-                        PantryListRow(item: item)
-                    }
-                    .onDelete { indexSet in
-                        dataPantryItems.deleteItem(indexSet: indexSet)
-                    }
-                }
-            }
-            .onAppear() {
-                dataRefrigeratorItems.getRefrigeratorItems()
-                dataFridgeItems.getFridgeItems()
             }
         }
     }
-}
-
-struct ItemsListView_Previews: PreviewProvider {
-    static var previews: some View {
-        ItemsListView()
+    
+    struct ItemsListView_Previews: PreviewProvider {
+        //@State static var enteredName: String = ""
+        static var previews: some View {
+            ItemsListView()
+        }
     }
-}
+    
+

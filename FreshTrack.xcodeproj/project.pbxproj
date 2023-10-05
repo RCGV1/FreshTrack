@@ -12,15 +12,17 @@
 		BC71A1FE2ACBAEB400FE413E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC71A1FD2ACBAEB400FE413E /* Preview Assets.xcassets */; };
 		BC71A2072ACBAF7500FE413E /* MainNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A2062ACBAF7500FE413E /* MainNavBar.swift */; };
 		BC71A2092ACBAFB100FE413E /* ItemsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A2082ACBAFB100FE413E /* ItemsListView.swift */; };
-		BC71A20B2ACBB2AA00FE413E /* RefrigeratorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A20A2ACBB2AA00FE413E /* RefrigeratorItem.swift */; };
-		BC71A20D2ACBB35900FE413E /* DataRefrigeratorItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A20C2ACBB35900FE413E /* DataRefrigeratorItems.swift */; };
-		BC71A2122ACBB45100FE413E /* RefrigeratorListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A2112ACBB45100FE413E /* RefrigeratorListRow.swift */; };
+		BC71A20B2ACBB2AA00FE413E /* FreezerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A20A2ACBB2AA00FE413E /* FreezerItem.swift */; };
+		BC71A20D2ACBB35900FE413E /* DataFreezerItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A20C2ACBB35900FE413E /* DataFreezerItems.swift */; };
+		BC71A2122ACBB45100FE413E /* FreezerListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A2112ACBB45100FE413E /* FreezerListRow.swift */; };
 		BC71A2162ACD1B3B00FE413E /* FridgeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A2152ACD1B3B00FE413E /* FridgeItem.swift */; };
 		BC71A2182ACD1B5E00FE413E /* DataFridgeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A2172ACD1B5E00FE413E /* DataFridgeItem.swift */; };
 		BC71A21A2ACD1C1C00FE413E /* FridgeListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A2192ACD1C1C00FE413E /* FridgeListRow.swift */; };
 		BC71A21C2ACD1E7700FE413E /* PantryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A21B2ACD1E7700FE413E /* PantryItem.swift */; };
 		BC71A21E2ACD1E9C00FE413E /* DataPantryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A21D2ACD1E9C00FE413E /* DataPantryItem.swift */; };
 		BC71A2202ACD1EED00FE413E /* PantryListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A21F2ACD1EED00FE413E /* PantryListRow.swift */; };
+		CDFEF6312ACD5F470082AD08 /* AddItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFEF6302ACD5F470082AD08 /* AddItem.swift */; };
+		CDFEF6362ACDBD410082AD08 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFEF6352ACDBD410082AD08 /* Functions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,15 +32,18 @@
 		BC71A1FD2ACBAEB400FE413E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BC71A2062ACBAF7500FE413E /* MainNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavBar.swift; sourceTree = "<group>"; };
 		BC71A2082ACBAFB100FE413E /* ItemsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListView.swift; sourceTree = "<group>"; };
-		BC71A20A2ACBB2AA00FE413E /* RefrigeratorItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefrigeratorItem.swift; sourceTree = "<group>"; };
-		BC71A20C2ACBB35900FE413E /* DataRefrigeratorItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRefrigeratorItems.swift; sourceTree = "<group>"; };
-		BC71A2112ACBB45100FE413E /* RefrigeratorListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefrigeratorListRow.swift; sourceTree = "<group>"; };
+		BC71A20A2ACBB2AA00FE413E /* FreezerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreezerItem.swift; sourceTree = "<group>"; };
+		BC71A20C2ACBB35900FE413E /* DataFreezerItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFreezerItems.swift; sourceTree = "<group>"; };
+		BC71A2112ACBB45100FE413E /* FreezerListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreezerListRow.swift; sourceTree = "<group>"; };
 		BC71A2152ACD1B3B00FE413E /* FridgeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeItem.swift; sourceTree = "<group>"; };
 		BC71A2172ACD1B5E00FE413E /* DataFridgeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFridgeItem.swift; sourceTree = "<group>"; };
 		BC71A2192ACD1C1C00FE413E /* FridgeListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeListRow.swift; sourceTree = "<group>"; };
 		BC71A21B2ACD1E7700FE413E /* PantryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryItem.swift; sourceTree = "<group>"; };
 		BC71A21D2ACD1E9C00FE413E /* DataPantryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPantryItem.swift; sourceTree = "<group>"; };
 		BC71A21F2ACD1EED00FE413E /* PantryListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryListRow.swift; sourceTree = "<group>"; };
+		CDFEF6302ACD5F470082AD08 /* AddItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItem.swift; sourceTree = "<group>"; };
+		CDFEF6342ACD808F0082AD08 /* misc.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = misc.md; sourceTree = "<group>"; };
+		CDFEF6352ACDBD410082AD08 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +60,7 @@
 		BC71A1EA2ACBAEB300FE413E = {
 			isa = PBXGroup;
 			children = (
+				CDFEF6342ACD808F0082AD08 /* misc.md */,
 				BC71A1F52ACBAEB300FE413E /* FreshTrack */,
 				BC71A1F42ACBAEB300FE413E /* Products */,
 			);
@@ -78,6 +84,7 @@
 				BC71A2062ACBAF7500FE413E /* MainNavBar.swift */,
 				BC71A1FA2ACBAEB400FE413E /* Assets.xcassets */,
 				BC71A1FC2ACBAEB400FE413E /* Preview Content */,
+				CDFEF6352ACDBD410082AD08 /* Functions.swift */,
 			);
 			path = FreshTrack;
 			sourceTree = "<group>";
@@ -93,10 +100,10 @@
 		BC71A2042ACBAEE900FE413E /* StorageItems */ = {
 			isa = PBXGroup;
 			children = (
-				BC71A20A2ACBB2AA00FE413E /* RefrigeratorItem.swift */,
+				BC71A20A2ACBB2AA00FE413E /* FreezerItem.swift */,
 				BC71A2152ACD1B3B00FE413E /* FridgeItem.swift */,
 				BC71A21B2ACD1E7700FE413E /* PantryItem.swift */,
-				BC71A20C2ACBB35900FE413E /* DataRefrigeratorItems.swift */,
+				BC71A20C2ACBB35900FE413E /* DataFreezerItems.swift */,
 				BC71A2172ACD1B5E00FE413E /* DataFridgeItem.swift */,
 				BC71A21D2ACD1E9C00FE413E /* DataPantryItem.swift */,
 			);
@@ -106,6 +113,7 @@
 		BC71A2052ACBAF3900FE413E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CDFEF6302ACD5F470082AD08 /* AddItem.swift */,
 				BC71A2082ACBAFB100FE413E /* ItemsListView.swift */,
 			);
 			path = Views;
@@ -114,7 +122,7 @@
 		BC71A2102ACBB43A00FE413E /* ListCreator */ = {
 			isa = PBXGroup;
 			children = (
-				BC71A2112ACBB45100FE413E /* RefrigeratorListRow.swift */,
+				BC71A2112ACBB45100FE413E /* FreezerListRow.swift */,
 				BC71A2192ACD1C1C00FE413E /* FridgeListRow.swift */,
 				BC71A21F2ACD1EED00FE413E /* PantryListRow.swift */,
 			);
@@ -192,12 +200,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC71A2162ACD1B3B00FE413E /* FridgeItem.swift in Sources */,
+				CDFEF6312ACD5F470082AD08 /* AddItem.swift in Sources */,
 				BC71A2182ACD1B5E00FE413E /* DataFridgeItem.swift in Sources */,
-				BC71A2122ACBB45100FE413E /* RefrigeratorListRow.swift in Sources */,
-				BC71A20B2ACBB2AA00FE413E /* RefrigeratorItem.swift in Sources */,
-				BC71A20D2ACBB35900FE413E /* DataRefrigeratorItems.swift in Sources */,
+				BC71A2122ACBB45100FE413E /* FreezerListRow.swift in Sources */,
+				BC71A20B2ACBB2AA00FE413E /* FreezerItem.swift in Sources */,
+				BC71A20D2ACBB35900FE413E /* DataFreezerItems.swift in Sources */,
 				BC71A21A2ACD1C1C00FE413E /* FridgeListRow.swift in Sources */,
 				BC71A1F72ACBAEB300FE413E /* FreshTrackApp.swift in Sources */,
+				CDFEF6362ACDBD410082AD08 /* Functions.swift in Sources */,
 				BC71A2092ACBAFB100FE413E /* ItemsListView.swift in Sources */,
 				BC71A2202ACD1EED00FE413E /* PantryListRow.swift in Sources */,
 				BC71A21C2ACD1E7700FE413E /* PantryItem.swift in Sources */,
