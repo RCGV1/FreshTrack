@@ -2,13 +2,14 @@ import SwiftUI
 
 
 struct ContentView: View {
-    var onAddItem: () -> Void
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @State var enteredName: String = ""
-    @State var selectedDate = Date()
-    @State var selectedOption = 0
-    let options = ["Freezer", "Fridge", "Pantry"]
+    @State private var enteredName: String = ""
+    @State private var selectedDate = Date()
+    @State private var selectedOption = 0
     @State private var shouldCommit: Bool = false
+    @EnvironmentObject var dataFreezerItems : DataFreezerItems
+    @EnvironmentObject var dataFridgeItems : DataFridgeItems
+    @EnvironmentObject var dataPantryItems : DataPantryItems
 
 
     var body: some View {
@@ -21,8 +22,9 @@ struct ContentView: View {
                     .padding()
                 
                 Picker("Where is the item stored?", selection: $selectedOption) {
-                    ForEach(0..<options.count, id: \.self) {
-                        Text(options[$0])
+                    Text("Freezer").tag(0)
+                    Text("Fridge").tag(1)
+                    Text("Pantry").tag(2)
                     }
                 }
                 .pickerStyle(InlinePickerStyle())
@@ -34,6 +36,20 @@ struct ContentView: View {
 
                 Button(action: {
                     shouldCommit = true
+                    if shouldCommit {
+                        switch selectedOption {
+                        case 0:
+                            dataFreezerItems.addItem(item: FreezerItem(emoji: "🍽", itemName: enteredName, dateAdded: selectedDate, days: 30))
+                        case 1:
+                            dataFridgeItems.addItem(item: FridgeItem(emoji: "🍽", itemName: enteredName, dateAdded: selectedDate, days: 30))
+
+                        case 2:
+                            dataPantryItems.addItem(item: PantryItem(emoji: "🍽", itemName: enteredName, dateAdded: selectedDate, days: 30))
+                        default:
+                            print("default")
+                        }
+                        shouldCommit = false
+                    }
                 }) {
                     Text("Add item")
                         .foregroundColor(.white)
@@ -43,21 +59,14 @@ struct ContentView: View {
                         .shadow(radius: 5)
                         .scaleEffect(shouldCommit ? 1.1 : 1.0)
                 }
-                .onChange(of: shouldCommit) { _ in
-                    if shouldCommit {
-                        onAddItem()
-                        shouldCommit = false
+
                     }
                 }
-
-
-        }
-    }
-}
+    
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(onAddItem: {})
+        ContentView()
     }
 }
 

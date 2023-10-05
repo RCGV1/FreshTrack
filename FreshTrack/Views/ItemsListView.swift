@@ -4,16 +4,10 @@ import Foundation
 
 struct ItemsListView: View {
     
-    @StateObject var dataFreezerItems = DataFreezerItems()
-    @StateObject var dataFridgeItems = DataFridgeItems()
-    @StateObject var dataPantryItems = DataPantryItems()
-    //@Binding var enteredName: String
-    let contentView = ContentView(onAddItem: {})
+    @EnvironmentObject var dataFreezerItems : DataFreezerItems
+    @EnvironmentObject var dataFridgeItems : DataFridgeItems
+    @EnvironmentObject var dataPantryItems : DataPantryItems
     
-    func addItemToList() {
-        dataFridgeItems.addItem(item: FridgeItem(emoji: "🍔",itemName: "Hamburger",  dateAdded: Date(), days: 20))
-        print(contentView.enteredName)
-    }
 
         var body: some View {
             NavigationView {
@@ -23,11 +17,10 @@ struct ItemsListView: View {
                             .font(.largeTitle)
                             .fontWeight(.bold)
                         Spacer()
-                        NavigationLink(destination:ContentView(onAddItem: addItemToList)) {
+                        NavigationLink(destination:ContentView()) {
                             Image(systemName: "plus")
-                                .font(.title)
-                            
-                                .cornerRadius(10)
+                                    .font(.title)
+                                    .cornerRadius(10)
                         }
                         .navigationBarTitleDisplayMode(.inline)
                         
@@ -63,6 +56,7 @@ struct ItemsListView: View {
                     .onAppear() {
                         dataFreezerItems.getFreezerItems()
                         dataFridgeItems.getFridgeItems()
+                        dataPantryItems.getPantryItems()    
                     }
                 }
             }
@@ -70,7 +64,7 @@ struct ItemsListView: View {
     }
     
     struct ItemsListView_Previews: PreviewProvider {
-        //@State static var enteredName: String = ""
+        @State static var enteredName: String = ""
         static var previews: some View {
             ItemsListView()
         }

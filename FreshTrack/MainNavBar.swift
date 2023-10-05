@@ -8,13 +8,21 @@
 import SwiftUI
 
 
+
 struct MainNavBar: View {
+    @StateObject var dataFreezerItems = DataFreezerItems()
+    @StateObject var dataFridgeItems = DataFridgeItems()
+    @StateObject var dataPantryItems = DataPantryItems()
     var body: some View {
         TabView{
             ItemsListView()
+                .environmentObject(dataFreezerItems)
+                .environmentObject(dataFridgeItems)
+                .environmentObject(dataPantryItems)
+
                 .tabItem {
-                    Image(systemName: "carrot.fill")
-                    Text("Saved Foods")
+                 Image(systemName: "carrot.fill")
+                 Text("Saved Foods")
                 }
             Text("Test")
                 .tabItem {

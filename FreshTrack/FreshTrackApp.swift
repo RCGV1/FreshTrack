@@ -12,7 +12,7 @@ struct FreshTrackApp: App {
 
     var body: some Scene {
         WindowGroup {
-            MainNavBar()
+            MainNavBar(dataFreezerItems: DataFreezerItems(), dataFridgeItems: DataFridgeItems(), dataPantryItems: DataPantryItems())
         }
     
     }
