@@ -16,7 +16,8 @@ struct ContentView: View {
         
         VStack {
             List {
-                TextField("Enter Name", text: $enteredName)                .padding()
+                TextField("Enter Name", text: $enteredName)
+                    .padding()
                 
                 DatePicker("Date", selection: $selectedDate, displayedComponents: .date)
                     .padding()
