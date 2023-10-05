@@ -54,6 +54,7 @@ struct ItemsListView: View {
                         Section(header: Text("Pantry Items 🗄️").fontWeight(.bold).font(.headline)) {
                             ForEach(dataPantryItems.items, id: \.self) { item in
                                 PantryListRow(item: item)
+                               
                             }
                             .onDelete { indexSet in
                                 dataPantryItems.deleteItem(indexSet: indexSet)

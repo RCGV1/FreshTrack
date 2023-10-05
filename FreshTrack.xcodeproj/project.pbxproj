@@ -21,6 +21,7 @@
 		BC71A21C2ACD1E7700FE413E /* PantryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A21B2ACD1E7700FE413E /* PantryItem.swift */; };
 		BC71A21E2ACD1E9C00FE413E /* DataPantryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A21D2ACD1E9C00FE413E /* DataPantryItem.swift */; };
 		BC71A2202ACD1EED00FE413E /* PantryListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A21F2ACD1EED00FE413E /* PantryListRow.swift */; };
+		BC71A2222ACE709700FE413E /* nameToEmojiModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = BC71A2212ACE709700FE413E /* nameToEmojiModel.mlmodel */; };
 		CDFEF6312ACD5F470082AD08 /* AddItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFEF6302ACD5F470082AD08 /* AddItem.swift */; };
 		CDFEF6362ACDBD410082AD08 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFEF6352ACDBD410082AD08 /* Functions.swift */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,7 @@
 		BC71A21B2ACD1E7700FE413E /* PantryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryItem.swift; sourceTree = "<group>"; };
 		BC71A21D2ACD1E9C00FE413E /* DataPantryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPantryItem.swift; sourceTree = "<group>"; };
 		BC71A21F2ACD1EED00FE413E /* PantryListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryListRow.swift; sourceTree = "<group>"; };
+		BC71A2212ACE709700FE413E /* nameToEmojiModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = nameToEmojiModel.mlmodel; sourceTree = "<group>"; };
 		CDFEF6302ACD5F470082AD08 /* AddItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItem.swift; sourceTree = "<group>"; };
 		CDFEF6342ACD808F0082AD08 /* misc.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = misc.md; sourceTree = "<group>"; };
 		CDFEF6352ACDBD410082AD08 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				BC71A1FA2ACBAEB400FE413E /* Assets.xcassets */,
 				BC71A1FC2ACBAEB400FE413E /* Preview Content */,
 				CDFEF6352ACDBD410082AD08 /* Functions.swift */,
+				BC71A2212ACE709700FE413E /* nameToEmojiModel.mlmodel */,
 			);
 			path = FreshTrack;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				BC71A20D2ACBB35900FE413E /* DataFreezerItems.swift in Sources */,
 				BC71A21A2ACD1C1C00FE413E /* FridgeListRow.swift in Sources */,
 				BC71A1F72ACBAEB300FE413E /* FreshTrackApp.swift in Sources */,
+				BC71A2222ACE709700FE413E /* nameToEmojiModel.mlmodel in Sources */,
 				CDFEF6362ACDBD410082AD08 /* Functions.swift in Sources */,
 				BC71A2092ACBAFB100FE413E /* ItemsListView.swift in Sources */,
 				BC71A2202ACD1EED00FE413E /* PantryListRow.swift in Sources */,
