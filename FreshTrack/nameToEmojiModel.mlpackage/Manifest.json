@@ -1,0 +1,24 @@
+{
+    "fileFormatVersion": "1.0.0",
+    "itemInfoEntries": {
+        "060A870D-8728-42EE-A8C5-5C48CF9C2832": {
+            "author": "com.apple.CoreML",
+            "description": "External Metadata Overlay",
+            "name": "Metadata.json",
+            "path": "com.apple.CoreML/Metadata.json"
+        },
+        "3070FB8E-78FB-4393-BB3D-4F3AF538BB6E": {
+            "author": "com.apple.CoreML",
+            "description": "External FeatureDescription Overlay",
+            "name": "FeatureDescriptions.json",
+            "path": "com.apple.CoreML/FeatureDescriptions.json"
+        },
+        "99EDEA4C-4EE6-45C5-9469-5477BF7478B1": {
+            "author": "com.apple.CoreML",
+            "description": "CoreML Model Specification",
+            "name": "nameToEmojiModel.mlmodel",
+            "path": "com.apple.CoreML/nameToEmojiModel.mlmodel"
+        }
+    },
+    "rootModelIdentifier": "99EDEA4C-4EE6-45C5-9469-5477BF7478B1"
+}

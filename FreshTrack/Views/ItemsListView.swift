@@ -1,6 +1,4 @@
 import SwiftUI
-import Foundation
-
 
 struct ItemsListView: View {
     
@@ -8,8 +6,8 @@ struct ItemsListView: View {
     @EnvironmentObject var dataFridgeItems : DataFridgeItems
     @EnvironmentObject var dataPantryItems : DataPantryItems
     
-
         var body: some View {
+            
             NavigationView {
                 VStack {
                     HStack {
@@ -60,15 +58,18 @@ struct ItemsListView: View {
                         dataPantryItems.getPantryItems()    
                     }
                 }
+                
             }
         }
     }
     
     struct ItemsListView_Previews: PreviewProvider {
-        @State static var enteredName: String = ""
         static var previews: some View {
             ItemsListView()
+                .environmentObject(DataFreezerItems())
+                .environmentObject(DataFridgeItems())
+                .environmentObject(DataPantryItems())
+
         }
     }
     
-
