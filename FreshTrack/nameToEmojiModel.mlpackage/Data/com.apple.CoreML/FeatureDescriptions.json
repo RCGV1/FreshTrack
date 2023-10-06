@@ -1,0 +1,18 @@
+{
+  "Outputs" : {
+    "Emoji" : {
+      "MLFeatureShortDescription" : "--"
+    },
+    "EmojiProbability" : {
+      "MLFeatureShortDescription" : "--"
+    }
+  },
+  "Inputs" : {
+    "Food Name" : {
+      "MLFeatureShortDescription" : "--"
+    }
+  },
+  "TrainingInputs" : {
+
+  }
+}

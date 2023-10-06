@@ -1,0 +1,12 @@
+{
+  "MLModelVersionStringKey" : "--",
+  "MLModelDescriptionKey" : "--",
+  "MLModelCreatorDefinedKey" : {
+    "com.apple.createml.app.tag" : "99.4",
+    "com.apple.createml.version" : "13.4.1",
+    "com.apple.coreml.model.preview.type" : "tabularClassifier",
+    "com.apple.createml.app.version" : "4.0"
+  },
+  "MLModelAuthorKey" : "Benjamin Faershtein",
+  "MLModelLicenseKey" : "--"
+}
