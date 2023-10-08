@@ -20,7 +20,16 @@ struct ContentView: View {
             return "🍽"
         }
     }
-
+    func generateExpirationDays(foodName: String, foodStorage: String) -> Int {
+        do {
+            let model = try foodExpirationDate_Model_v4(configuration: MLModelConfiguration())
+            let inputFeatures = foodExpirationDate_Model_v4Input(Food_Name: foodName, Storage: foodStorage)
+            let prediction = try model.prediction(input: inputFeatures)
+            return Int(prediction.Days)
+        } catch {
+            return 0
+        }
+    }
     var body: some View {
         NavigationView {
             VStack {
@@ -39,20 +48,19 @@ struct ContentView: View {
                     .pickerStyle(SegmentedPickerStyle())
                     .padding()
                 }
-                .padding()
 
                 Button(action: {
                     shouldCommit = true
                     if shouldCommit {
                         switch selectedOption {
                         case 0:
-                            dataFreezerItems.addItem(item: FreezerItem(emoji: generateEmoji(foodName:enteredName), itemName: enteredName, dateAdded: selectedDate, days: 30))
+                            dataFreezerItems.addItem(item: FreezerItem(emoji: generateEmoji(foodName:enteredName), itemName: enteredName, dateAdded: selectedDate, days: generateExpirationDays(foodName: enteredName, foodStorage: "Freezer")))
 
                         case 1:
-                            dataFridgeItems.addItem(item: FridgeItem(emoji: "🍽", itemName: enteredName, dateAdded: selectedDate, days: 30))
+                            dataFridgeItems.addItem(item: FridgeItem(emoji: "🍽", itemName: enteredName, dateAdded: selectedDate, days: generateExpirationDays(foodName: enteredName, foodStorage: "Fridge")))
 
                         case 2:
-                            dataPantryItems.addItem(item: PantryItem(emoji: "🍽", itemName: enteredName, dateAdded: selectedDate, days: 30))
+                            dataPantryItems.addItem(item: PantryItem(emoji: "🍽", itemName: enteredName, dateAdded: selectedDate, days: generateExpirationDays(foodName: enteredName, foodStorage: "Pantry")))
                         default:
                             print("default")
                         }
@@ -67,9 +75,11 @@ struct ContentView: View {
                         .shadow(radius: 5)
                         .scaleEffect(shouldCommit ? 1.1 : 1.0)
                 }
+                Spacer()
                 .padding()
             }
             .navigationBarTitle("Add Item")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }

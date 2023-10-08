@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct FreezerItemDetails: View {
+struct FreezerAdvancedView: View {
     let currentDate = Date()
     let calendar = Calendar.current
     var item: FreezerItem
@@ -18,7 +18,7 @@ struct FreezerItemDetails: View {
                 .padding()
             Text("Location: Freezer")
                 .font(.headline)
-            Text(calculateExpirationDate(numberOfDays: item.days))
+            Text(calculateExpirationDate(daysRemaining: item.days) ?? "0")
         }
         .navigationTitle(item.itemName)
         
@@ -29,5 +29,5 @@ struct FreezerItemDetails: View {
 
 
 #Preview {
-    FreezerItemDetails(item: FreezerItem(emoji: "🍔",itemName: "Hamburger",  dateAdded: Date(), days: 1))
+    FreezerAdvancedView(item: FreezerItem(emoji: "🍔",itemName: "Hamburger",  dateAdded: Date(), days: 1))
 }

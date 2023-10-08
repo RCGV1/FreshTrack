@@ -21,6 +21,11 @@
 		BC71A21C2ACD1E7700FE413E /* PantryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A21B2ACD1E7700FE413E /* PantryItem.swift */; };
 		BC71A21E2ACD1E9C00FE413E /* DataPantryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A21D2ACD1E9C00FE413E /* DataPantryItem.swift */; };
 		BC71A2202ACD1EED00FE413E /* PantryListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A21F2ACD1EED00FE413E /* PantryListRow.swift */; };
+		CD6E3D682AD2898D00116ED1 /* FreezerAdvancedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6E3D672AD2898D00116ED1 /* FreezerAdvancedView.swift */; };
+		CD6E3D6A2AD28A2C00116ED1 /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6E3D692AD28A2C00116ED1 /* CountdownTimer.swift */; };
+		CD6E3D6C2AD28EB200116ED1 /* FridgeAdvancedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6E3D6B2AD28EB200116ED1 /* FridgeAdvancedView.swift */; };
+		CD6E3D6E2AD28EC000116ED1 /* PantryAdvancedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6E3D6D2AD28EC000116ED1 /* PantryAdvancedView.swift */; };
+		CD6E3D702AD2903B00116ED1 /* foodExpirationDate_Model_v4.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CD6E3D6F2AD2903B00116ED1 /* foodExpirationDate_Model_v4.mlmodel */; };
 		CD921BF12AD0630100D2805C /* nameToEmojiModel.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = CD921BF02AD0630100D2805C /* nameToEmojiModel.mlpackage */; };
 		CDFEF6312ACD5F470082AD08 /* AddItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFEF6302ACD5F470082AD08 /* AddItem.swift */; };
 		CDFEF6362ACDBD410082AD08 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFEF6352ACDBD410082AD08 /* Functions.swift */; };
@@ -42,6 +47,11 @@
 		BC71A21B2ACD1E7700FE413E /* PantryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryItem.swift; sourceTree = "<group>"; };
 		BC71A21D2ACD1E9C00FE413E /* DataPantryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPantryItem.swift; sourceTree = "<group>"; };
 		BC71A21F2ACD1EED00FE413E /* PantryListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryListRow.swift; sourceTree = "<group>"; };
+		CD6E3D672AD2898D00116ED1 /* FreezerAdvancedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreezerAdvancedView.swift; sourceTree = "<group>"; };
+		CD6E3D692AD28A2C00116ED1 /* CountdownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
+		CD6E3D6B2AD28EB200116ED1 /* FridgeAdvancedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FridgeAdvancedView.swift; sourceTree = "<group>"; };
+		CD6E3D6D2AD28EC000116ED1 /* PantryAdvancedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PantryAdvancedView.swift; sourceTree = "<group>"; };
+		CD6E3D6F2AD2903B00116ED1 /* foodExpirationDate_Model_v4.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = foodExpirationDate_Model_v4.mlmodel; sourceTree = "<group>"; };
 		CD921BF02AD0630100D2805C /* nameToEmojiModel.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = nameToEmojiModel.mlpackage; sourceTree = "<group>"; };
 		CDFEF6302ACD5F470082AD08 /* AddItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItem.swift; sourceTree = "<group>"; };
 		CDFEF6342ACD808F0082AD08 /* misc.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = misc.md; sourceTree = "<group>"; };
@@ -88,6 +98,7 @@
 				BC71A1FC2ACBAEB400FE413E /* Preview Content */,
 				CDFEF6352ACDBD410082AD08 /* Functions.swift */,
 				CD921BF02AD0630100D2805C /* nameToEmojiModel.mlpackage */,
+				CD6E3D6F2AD2903B00116ED1 /* foodExpirationDate_Model_v4.mlmodel */,
 			);
 			path = FreshTrack;
 			sourceTree = "<group>";
@@ -118,6 +129,10 @@
 			children = (
 				CDFEF6302ACD5F470082AD08 /* AddItem.swift */,
 				BC71A2082ACBAFB100FE413E /* ItemsListView.swift */,
+				CD6E3D672AD2898D00116ED1 /* FreezerAdvancedView.swift */,
+				CD6E3D6B2AD28EB200116ED1 /* FridgeAdvancedView.swift */,
+				CD6E3D6D2AD28EC000116ED1 /* PantryAdvancedView.swift */,
+				CD6E3D692AD28A2C00116ED1 /* CountdownTimer.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -202,14 +217,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD6E3D6A2AD28A2C00116ED1 /* CountdownTimer.swift in Sources */,
 				BC71A2162ACD1B3B00FE413E /* FridgeItem.swift in Sources */,
+				CD6E3D6E2AD28EC000116ED1 /* PantryAdvancedView.swift in Sources */,
 				CDFEF6312ACD5F470082AD08 /* AddItem.swift in Sources */,
+				CD6E3D6C2AD28EB200116ED1 /* FridgeAdvancedView.swift in Sources */,
 				BC71A2182ACD1B5E00FE413E /* DataFridgeItem.swift in Sources */,
 				BC71A2122ACBB45100FE413E /* FreezerListRow.swift in Sources */,
 				BC71A20B2ACBB2AA00FE413E /* FreezerItem.swift in Sources */,
 				BC71A20D2ACBB35900FE413E /* DataFreezerItems.swift in Sources */,
+				CD6E3D702AD2903B00116ED1 /* foodExpirationDate_Model_v4.mlmodel in Sources */,
 				CD921BF12AD0630100D2805C /* nameToEmojiModel.mlpackage in Sources */,
 				BC71A21A2ACD1C1C00FE413E /* FridgeListRow.swift in Sources */,
+				CD6E3D682AD2898D00116ED1 /* FreezerAdvancedView.swift in Sources */,
 				BC71A1F72ACBAEB300FE413E /* FreshTrackApp.swift in Sources */,
 				CDFEF6362ACDBD410082AD08 /* Functions.swift in Sources */,
 				BC71A2092ACBAFB100FE413E /* ItemsListView.swift in Sources */,

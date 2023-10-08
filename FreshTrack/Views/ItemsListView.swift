@@ -25,17 +25,22 @@ struct ItemsListView: View {
                     }
                     .padding()
                     List {
-                        Section(header: Text("Freezer Items ❄️").fontWeight(.bold).font(.headline)) {
-                            ForEach(dataFreezerItems.items, id: \.self) { item in
-                                FreezerListRow(item: item)
+                            Section(header: Text("Freezer Items ❄️").fontWeight(.bold).font(.headline)) {
+                                ForEach(dataFreezerItems.items, id: \.self) { item in
+                                    NavigationLink(destination: FreezerAdvancedView(item: item)) {
+                                               FreezerListRow(item: item)
+                                           }
+                                }
+                                .onDelete { indexSet in
+                                    dataFreezerItems.deleteItem(indexSet: indexSet)
+                                }
                             }
-                            .onDelete { indexSet in
-                                dataFreezerItems.deleteItem(indexSet: indexSet)
-                            }
-                        }
+
                         Section(header: Text("Fridge Items 🧊").fontWeight(.bold).font(.headline)) {
                             ForEach(dataFridgeItems.items, id: \.self) { item in
-                                FridgeListRow(item: item)
+                                NavigationLink(destination: FridgeAdvancedView(item: item)) {
+                                    FridgeListRow(item: item)
+                                }
                             }
                             .onDelete { indexSet in
                                 dataFridgeItems.deleteItem(indexSet: indexSet)
@@ -44,8 +49,9 @@ struct ItemsListView: View {
                         
                         Section(header: Text("Pantry Items 🗄️").fontWeight(.bold).font(.headline)) {
                             ForEach(dataPantryItems.items, id: \.self) { item in
-                                PantryListRow(item: item)
-                               
+                                NavigationLink(destination: PantryAdvancedView(item: item)) {
+                                           PantryListRow(item: item)
+                                       }
                             }
                             .onDelete { indexSet in
                                 dataPantryItems.deleteItem(indexSet: indexSet)
