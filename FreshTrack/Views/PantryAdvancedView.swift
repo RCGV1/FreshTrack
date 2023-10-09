@@ -8,12 +8,25 @@
 import SwiftUI
 
 struct PantryAdvancedView: View {
+   
+    
     let currentDate = Date()
     let calendar = Calendar.current
     var item: PantryItem
+    
+    var daysLeft: Int {
+            
+            let components = calendar.dateComponents([.day], from: currentDate, to: item.dateAdded)
+            
+            let daysFromAddedToCurrent = components.day ?? 0
+            return daysFromAddedToCurrent + item.days
+        }
+    
     var body: some View {
         VStack {
-            CountdownTimerView(totalDays: 30, daysLeft:item.days, customText: item.emoji)
+            Text(item.itemName)
+                .font(.largeTitle)
+            CountdownTimerView(totalDays: item.days, daysLeft:daysLeft, customText: item.emoji)
                 .padding()
             Text("Location: Pantry")
                 .font(.headline)

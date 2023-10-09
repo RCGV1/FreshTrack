@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC545D872AD37940006BBC8C /* AutoCompleteTerms.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC545D862AD37940006BBC8C /* AutoCompleteTerms.swift */; };
 		BC71A1F72ACBAEB300FE413E /* FreshTrackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A1F62ACBAEB300FE413E /* FreshTrackApp.swift */; };
 		BC71A1FB2ACBAEB400FE413E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC71A1FA2ACBAEB400FE413E /* Assets.xcassets */; };
 		BC71A1FE2ACBAEB400FE413E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC71A1FD2ACBAEB400FE413E /* Preview Assets.xcassets */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC545D862AD37940006BBC8C /* AutoCompleteTerms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoCompleteTerms.swift; sourceTree = "<group>"; };
 		BC71A1F32ACBAEB300FE413E /* FreshTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreshTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC71A1F62ACBAEB300FE413E /* FreshTrackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshTrackApp.swift; sourceTree = "<group>"; };
 		BC71A1FA2ACBAEB400FE413E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				CDFEF6352ACDBD410082AD08 /* Functions.swift */,
 				CD921BF02AD0630100D2805C /* nameToEmojiModel.mlpackage */,
 				CD6E3D6F2AD2903B00116ED1 /* foodExpirationDate_Model_v4.mlmodel */,
+				BC545D862AD37940006BBC8C /* AutoCompleteTerms.swift */,
 			);
 			path = FreshTrack;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				BC71A1F72ACBAEB300FE413E /* FreshTrackApp.swift in Sources */,
 				CDFEF6362ACDBD410082AD08 /* Functions.swift in Sources */,
 				BC71A2092ACBAFB100FE413E /* ItemsListView.swift in Sources */,
+				BC545D872AD37940006BBC8C /* AutoCompleteTerms.swift in Sources */,
 				BC71A2202ACD1EED00FE413E /* PantryListRow.swift in Sources */,
 				BC71A21C2ACD1E7700FE413E /* PantryItem.swift in Sources */,
 				BC71A2072ACBAF7500FE413E /* MainNavBar.swift in Sources */,

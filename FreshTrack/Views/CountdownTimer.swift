@@ -16,9 +16,6 @@ struct CountdownTimerView: View {
 
     var body: some View {
         VStack {
-            Text("Countdown Timer")
-                .font(.largeTitle)
-                .padding()
 
             ZStack {
                 Circle()
@@ -35,10 +32,17 @@ struct CountdownTimerView: View {
                     .font(.title)
                     .bold()
             }
-            
-            Text("\(daysLeft) days left")
-                .font(.headline)
-                .padding()
+            if daysLeft == 1{
+                Text("\(daysLeft) day left")
+                    .font(.headline)
+                    .padding()
+                    .offset(y:20)
+            } else {
+                Text("\(daysLeft) days left")
+                    .font(.headline)
+                    .padding()
+                    .offset(y:20)
+            }
 
         }
         .onReceive(timer) { _ in
