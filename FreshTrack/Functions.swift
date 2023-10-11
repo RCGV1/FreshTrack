@@ -1,3 +1,4 @@
+import CoreML
 import Foundation
 
 
@@ -15,3 +16,13 @@ func calculateExpirationDate(daysRemaining: Int) -> String? {
 }
 
 
+func generateEmoji(foodName: String) -> String {
+    do {
+        let model = try nameToEmojiModel(configuration: MLModelConfiguration())
+        let inputFeatures = nameToEmojiModelInput(Food_Name: foodName)
+        let prediction = try model.prediction(input: inputFeatures)
+        return prediction.Emoji
+    } catch {
+        return "🍽"
+    }
+}

@@ -22,13 +22,12 @@ struct FreezerAdvancedView: View {
     
     var body: some View {
         VStack {
-            Text(item.itemName)
-                .font(.largeTitle)
             CountdownTimerView(totalDays: item.days, daysLeft:daysLeft, customText: item.emoji)
                 .padding()
             Text("Location: Freezer")
                 .font(.headline)
-            Text(calculateExpirationDate(daysRemaining: item.days) ?? "0")
+            Text("Date added: \(calculateExpirationDate(daysRemaining: item.days) ?? "0")")
+                .font(.headline)
         }
         .navigationTitle(item.itemName)
         

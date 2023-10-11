@@ -29,19 +29,25 @@ struct CountdownTimerView: View {
                     .frame(width: 200, height: 200)
                 
                 Text(customText)
-                    .font(.title)
+                    .font(.system(size:108))
                     .bold()
             }
-            if daysLeft == 1{
-                Text("\(daysLeft) day left")
-                    .font(.headline)
-                    .padding()
-                    .offset(y:20)
-            } else {
-                Text("\(daysLeft) days left")
-                    .font(.headline)
-                    .padding()
-                    .offset(y:20)
+            switch daysLeft {
+                case 1:
+                    Text("\(daysLeft) day left")
+                        .font(.headline)
+                        .padding()
+                        .offset(y:20)
+                case let x where x < 1:
+                    Text("This item has expired!")
+                        .font(.headline)
+                        .padding()
+                        .offset(y:20)
+                default:
+                    Text("\(daysLeft) days left")
+                        .font(.headline)
+                        .padding()
+                        .offset(y:20)
             }
 
         }

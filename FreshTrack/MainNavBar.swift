@@ -24,10 +24,10 @@ struct MainNavBar: View {
                  Image(systemName: "carrot.fill")
                  Text("Saved Foods")
                 }
-            Text("Test")
+            RecipeView()
                 .tabItem {
                     Image(systemName: "carrot")
-                    Text("Test")
+                    Text("Recipes")
                 }
         }
     

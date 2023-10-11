@@ -27,13 +27,21 @@ struct FridgeListRow: View {
             Text(item.emoji)
                 .font(.system(size: 36))
             VStack{
-           
                 Text(item.itemName)
                     .bold()
-                Text("Days Left: "+String(daysLeft))
-                    .foregroundColor(daysLeft < 7 ? Color.red : Color.accentColor)
-                    .font(Font.footnote)
-                    .multilineTextAlignment(.leading)
+                switch daysLeft {
+                    case let x where x < 1:
+                        Text("Item Expired!")
+                            .font(Font.footnote)
+                            .foregroundColor(Color.red)
+                            .multilineTextAlignment(.leading)
+                    default:
+                        Text("Days Left: "+String(daysLeft))
+                            .foregroundColor(daysLeft < 7 ? Color.yellow : Color.accentColor)
+                            .font(Font.footnote)
+                            .multilineTextAlignment(.leading)
+                }
+
             }
             
         }

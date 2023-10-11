@@ -13,16 +13,6 @@ struct ContentView: View {
     @EnvironmentObject var dataFreezerItems: DataFreezerItems
     @EnvironmentObject var dataFridgeItems: DataFridgeItems
     @EnvironmentObject var dataPantryItems: DataPantryItems
-    func generateEmoji(foodName: String) -> String {
-        do {
-            let model = try nameToEmojiModel(configuration: MLModelConfiguration())
-            let inputFeatures = nameToEmojiModelInput(Food_Name: foodName)
-            let prediction = try model.prediction(input: inputFeatures)
-            return prediction.Emoji
-        } catch {
-            return "🍽"
-        }
-    }
     func generateExpirationDays(foodName: String, foodStorage: String) -> Int {
         do {
             let model = try foodExpirationDate_Model_v4(configuration: MLModelConfiguration())
@@ -115,6 +105,7 @@ struct ContentView: View {
                     Button(action: {
                         shouldCommit = true
                         if shouldCommit {
+                            self.presentationMode.wrappedValue.dismiss()
                             switch selectedOption {
                             case 0:
                                 dataFreezerItems.addItem(item: FreezerItem(emoji: generateEmoji(foodName:enteredName), itemName: enteredName, dateAdded: selectedDate, days: generateExpirationDays(foodName: enteredName.lowercased(), foodStorage: "Freezer")))

@@ -27,6 +27,15 @@
 		CD6E3D6C2AD28EB200116ED1 /* FridgeAdvancedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6E3D6B2AD28EB200116ED1 /* FridgeAdvancedView.swift */; };
 		CD6E3D6E2AD28EC000116ED1 /* PantryAdvancedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6E3D6D2AD28EC000116ED1 /* PantryAdvancedView.swift */; };
 		CD6E3D702AD2903B00116ED1 /* foodExpirationDate_Model_v4.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CD6E3D6F2AD2903B00116ED1 /* foodExpirationDate_Model_v4.mlmodel */; };
+		CD6E3D722AD3C9C900116ED1 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6E3D712AD3C9C900116ED1 /* RecipeView.swift */; };
+		CD6E3D772AD53AAD00116ED1 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6E3D762AD53AAD00116ED1 /* Credentials.swift */; };
+		CD6E3D792AD53B1800116ED1 /* OpenAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6E3D782AD53B1800116ED1 /* OpenAIService.swift */; };
+		CD6E3D7C2AD53BF200116ED1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CD6E3D7B2AD53BF200116ED1 /* Alamofire */; };
+		CD6E3D832AD71E8A00116ED1 /* SwiftBasicFormat in Frameworks */ = {isa = PBXBuildFile; productRef = CD6E3D822AD71E8A00116ED1 /* SwiftBasicFormat */; };
+		CD6E3D852AD71E8A00116ED1 /* SwiftCompilerPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = CD6E3D842AD71E8A00116ED1 /* SwiftCompilerPlugin */; };
+		CD6E3D872AD71E8A00116ED1 /* SwiftCompilerPluginMessageHandling in Frameworks */ = {isa = PBXBuildFile; productRef = CD6E3D862AD71E8A00116ED1 /* SwiftCompilerPluginMessageHandling */; };
+		CD6E3D892AD71E8A00116ED1 /* SwiftDiagnostics in Frameworks */ = {isa = PBXBuildFile; productRef = CD6E3D882AD71E8A00116ED1 /* SwiftDiagnostics */; };
+		CD6E3D8B2AD71E8A00116ED1 /* SwiftIDEUtils in Frameworks */ = {isa = PBXBuildFile; productRef = CD6E3D8A2AD71E8A00116ED1 /* SwiftIDEUtils */; };
 		CD921BF12AD0630100D2805C /* nameToEmojiModel.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = CD921BF02AD0630100D2805C /* nameToEmojiModel.mlpackage */; };
 		CDFEF6312ACD5F470082AD08 /* AddItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFEF6302ACD5F470082AD08 /* AddItem.swift */; };
 		CDFEF6362ACDBD410082AD08 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFEF6352ACDBD410082AD08 /* Functions.swift */; };
@@ -54,6 +63,9 @@
 		CD6E3D6B2AD28EB200116ED1 /* FridgeAdvancedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FridgeAdvancedView.swift; sourceTree = "<group>"; };
 		CD6E3D6D2AD28EC000116ED1 /* PantryAdvancedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PantryAdvancedView.swift; sourceTree = "<group>"; };
 		CD6E3D6F2AD2903B00116ED1 /* foodExpirationDate_Model_v4.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = foodExpirationDate_Model_v4.mlmodel; sourceTree = "<group>"; };
+		CD6E3D712AD3C9C900116ED1 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
+		CD6E3D762AD53AAD00116ED1 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		CD6E3D782AD53B1800116ED1 /* OpenAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
 		CD921BF02AD0630100D2805C /* nameToEmojiModel.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = nameToEmojiModel.mlpackage; sourceTree = "<group>"; };
 		CDFEF6302ACD5F470082AD08 /* AddItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItem.swift; sourceTree = "<group>"; };
 		CDFEF6342ACD808F0082AD08 /* misc.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = misc.md; sourceTree = "<group>"; };
@@ -65,6 +77,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD6E3D832AD71E8A00116ED1 /* SwiftBasicFormat in Frameworks */,
+				CD6E3D7C2AD53BF200116ED1 /* Alamofire in Frameworks */,
+				CD6E3D852AD71E8A00116ED1 /* SwiftCompilerPlugin in Frameworks */,
+				CD6E3D8B2AD71E8A00116ED1 /* SwiftIDEUtils in Frameworks */,
+				CD6E3D892AD71E8A00116ED1 /* SwiftDiagnostics in Frameworks */,
+				CD6E3D872AD71E8A00116ED1 /* SwiftCompilerPluginMessageHandling in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +120,8 @@
 				CD921BF02AD0630100D2805C /* nameToEmojiModel.mlpackage */,
 				CD6E3D6F2AD2903B00116ED1 /* foodExpirationDate_Model_v4.mlmodel */,
 				BC545D862AD37940006BBC8C /* AutoCompleteTerms.swift */,
+				CD6E3D762AD53AAD00116ED1 /* Credentials.swift */,
+				CD6E3D782AD53B1800116ED1 /* OpenAIService.swift */,
 			);
 			path = FreshTrack;
 			sourceTree = "<group>";
@@ -136,6 +156,7 @@
 				CD6E3D6B2AD28EB200116ED1 /* FridgeAdvancedView.swift */,
 				CD6E3D6D2AD28EC000116ED1 /* PantryAdvancedView.swift */,
 				CD6E3D692AD28A2C00116ED1 /* CountdownTimer.swift */,
+				CD6E3D712AD3C9C900116ED1 /* RecipeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -166,6 +187,14 @@
 			dependencies = (
 			);
 			name = FreshTrack;
+			packageProductDependencies = (
+				CD6E3D7B2AD53BF200116ED1 /* Alamofire */,
+				CD6E3D822AD71E8A00116ED1 /* SwiftBasicFormat */,
+				CD6E3D842AD71E8A00116ED1 /* SwiftCompilerPlugin */,
+				CD6E3D862AD71E8A00116ED1 /* SwiftCompilerPluginMessageHandling */,
+				CD6E3D882AD71E8A00116ED1 /* SwiftDiagnostics */,
+				CD6E3D8A2AD71E8A00116ED1 /* SwiftIDEUtils */,
+			);
 			productName = FreshTrack;
 			productReference = BC71A1F32ACBAEB300FE413E /* FreshTrack.app */;
 			productType = "com.apple.product-type.application";
@@ -194,6 +223,11 @@
 				Base,
 			);
 			mainGroup = BC71A1EA2ACBAEB300FE413E;
+			packageReferences = (
+				CD6E3D732AD3FCB000116ED1 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+				CD6E3D7A2AD53BF200116ED1 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				CD6E3D812AD71E8A00116ED1 /* XCRemoteSwiftPackageReference "swift-syntax" */,
+			);
 			productRefGroup = BC71A1F42ACBAEB300FE413E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -224,17 +258,20 @@
 				BC71A2162ACD1B3B00FE413E /* FridgeItem.swift in Sources */,
 				CD6E3D6E2AD28EC000116ED1 /* PantryAdvancedView.swift in Sources */,
 				CDFEF6312ACD5F470082AD08 /* AddItem.swift in Sources */,
+				CD6E3D722AD3C9C900116ED1 /* RecipeView.swift in Sources */,
 				CD6E3D6C2AD28EB200116ED1 /* FridgeAdvancedView.swift in Sources */,
 				BC71A2182ACD1B5E00FE413E /* DataFridgeItem.swift in Sources */,
 				BC71A2122ACBB45100FE413E /* FreezerListRow.swift in Sources */,
 				BC71A20B2ACBB2AA00FE413E /* FreezerItem.swift in Sources */,
 				BC71A20D2ACBB35900FE413E /* DataFreezerItems.swift in Sources */,
 				CD6E3D702AD2903B00116ED1 /* foodExpirationDate_Model_v4.mlmodel in Sources */,
+				CD6E3D792AD53B1800116ED1 /* OpenAIService.swift in Sources */,
 				CD921BF12AD0630100D2805C /* nameToEmojiModel.mlpackage in Sources */,
 				BC71A21A2ACD1C1C00FE413E /* FridgeListRow.swift in Sources */,
 				CD6E3D682AD2898D00116ED1 /* FreezerAdvancedView.swift in Sources */,
 				BC71A1F72ACBAEB300FE413E /* FreshTrackApp.swift in Sources */,
 				CDFEF6362ACDBD410082AD08 /* Functions.swift in Sources */,
+				CD6E3D772AD53AAD00116ED1 /* Credentials.swift in Sources */,
 				BC71A2092ACBAFB100FE413E /* ItemsListView.swift in Sources */,
 				BC545D872AD37940006BBC8C /* AutoCompleteTerms.swift in Sources */,
 				BC71A2202ACD1EED00FE413E /* PantryListRow.swift in Sources */,
@@ -447,6 +484,66 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CD6E3D732AD3FCB000116ED1 /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.1;
+			};
+		};
+		CD6E3D7A2AD53BF200116ED1 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.0;
+			};
+		};
+		CD6E3D812AD71E8A00116ED1 /* XCRemoteSwiftPackageReference "swift-syntax" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-syntax.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 509.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CD6E3D7B2AD53BF200116ED1 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD6E3D7A2AD53BF200116ED1 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		CD6E3D822AD71E8A00116ED1 /* SwiftBasicFormat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD6E3D812AD71E8A00116ED1 /* XCRemoteSwiftPackageReference "swift-syntax" */;
+			productName = SwiftBasicFormat;
+		};
+		CD6E3D842AD71E8A00116ED1 /* SwiftCompilerPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD6E3D812AD71E8A00116ED1 /* XCRemoteSwiftPackageReference "swift-syntax" */;
+			productName = SwiftCompilerPlugin;
+		};
+		CD6E3D862AD71E8A00116ED1 /* SwiftCompilerPluginMessageHandling */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD6E3D812AD71E8A00116ED1 /* XCRemoteSwiftPackageReference "swift-syntax" */;
+			productName = SwiftCompilerPluginMessageHandling;
+		};
+		CD6E3D882AD71E8A00116ED1 /* SwiftDiagnostics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD6E3D812AD71E8A00116ED1 /* XCRemoteSwiftPackageReference "swift-syntax" */;
+			productName = SwiftDiagnostics;
+		};
+		CD6E3D8A2AD71E8A00116ED1 /* SwiftIDEUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD6E3D812AD71E8A00116ED1 /* XCRemoteSwiftPackageReference "swift-syntax" */;
+			productName = SwiftIDEUtils;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BC71A1EB2ACBAEB300FE413E /* Project object */;
 }
