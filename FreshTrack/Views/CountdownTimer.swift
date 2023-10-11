@@ -16,10 +16,7 @@ struct CountdownTimerView: View {
 
     var body: some View {
         VStack {
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
             ZStack {
                 Circle()
                     .stroke(Color.gray.opacity(0.2), style: StrokeStyle(lineWidth: 20))
@@ -32,11 +29,7 @@ struct CountdownTimerView: View {
                     .frame(width: 200, height: 200)
                 
                 Text(customText)
-<<<<<<< Updated upstream
                     .font(.system(size:108))
-=======
-                    .font(.system(size: 108))
->>>>>>> Stashed changes
                     .bold()
             }
             switch daysLeft {
