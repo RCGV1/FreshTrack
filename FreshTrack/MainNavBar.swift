@@ -25,6 +25,9 @@ struct MainNavBar: View {
                  Text("Saved Foods")
                 }
             RecipeView()
+                .environmentObject(dataFreezerItems)
+                .environmentObject(dataFridgeItems)
+                .environmentObject(dataPantryItems)
                 .tabItem {
                     Image(systemName: "carrot")
                     Text("Recipes")
