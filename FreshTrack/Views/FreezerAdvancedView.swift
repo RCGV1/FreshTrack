@@ -22,7 +22,11 @@ struct FreezerAdvancedView: View {
     
     var body: some View {
         VStack {
+<<<<<<< Updated upstream
             CountdownTimerView(totalDays: item.days, daysLeft:daysLeft, customText: item.emoji)
+=======
+            CountdownTimerView(totalDays: generateExpirationDays(foodName: item.itemName, foodStorage: "Freezer"), daysLeft:item.days, customText: item.emoji)
+>>>>>>> Stashed changes
                 .padding()
             Text("Location: Freezer")
                 .font(.headline)
