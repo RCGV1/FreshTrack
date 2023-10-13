@@ -51,9 +51,7 @@ struct CountdownTimerView: View {
             }
 
         }
-        .onReceive(timer) { _ in
-            // Update logic based on timer if needed
-        }
+     
     }
 }
 

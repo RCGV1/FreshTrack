@@ -49,8 +49,105 @@ struct ContentView: View {
         let limitedSuggestions = Array(uniqueSuggestions)
         return limitedSuggestions
     }
+    func scheduleNotificationsFridge(item: FridgeItem) {
+          let center = UNUserNotificationCenter.current()
+          let content = UNMutableNotificationContent()
+          content.title = "Fridge Item Expiring"
+          content.body = "\(item.itemName) is expiring soon!"
+          content.sound = UNNotificationSound.default
+
+          // Calculate the notification date based on the item's days and dateAdded
+          let calendar = Calendar.current
+          let expirationDate = calendar.date(byAdding: .day, value: item.days, to: item.dateAdded)!
+        guard let notificationDate = calendar.date(byAdding: .day, value: -1, to: expirationDate) else {
+            // Handle the error condition here, such as logging an error or returning a default value.
+            return
+        }
+
+
+          let components = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: notificationDate)
+
+          let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
+          let request = UNNotificationRequest(identifier: item.id.uuidString, content: content, trigger: trigger)
+
+          center.add(request) { error in
+              if let error = error {
+                  print("Error scheduling notification: \(error)")
+              } else {
+                  print("Notification scheduled for \(item.itemName)")
+              }
+          }
+      }
+    func scheduleNotificationsFreezer(item: FreezerItem) {
+          let center = UNUserNotificationCenter.current()
+          let content = UNMutableNotificationContent()
+          content.title = "Freezer Item Expiring"
+          content.body = "\(item.itemName) is expiring soon!"
+          content.sound = UNNotificationSound.default
+
+          // Calculate the notification date based on the item's days and dateAdded
+          let calendar = Calendar.current
+          let expirationDate = calendar.date(byAdding: .day, value: item.days, to: item.dateAdded)!
+        guard let notificationDate = calendar.date(byAdding: .day, value: -1, to: expirationDate) else {
+            // Handle the error condition here, such as logging an error or returning a default value.
+            return
+        }
+
+
+          let components = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: notificationDate)
+
+          let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
+          let request = UNNotificationRequest(identifier: item.id.uuidString, content: content, trigger: trigger)
+
+          center.add(request) { error in
+              if let error = error {
+                  print("Error scheduling notification: \(error)")
+              } else {
+                  print("Notification scheduled for \(item.itemName)")
+              }
+          }
+      }
+    func scheduleNotificationsPantry(item: PantryItem) {
+          let center = UNUserNotificationCenter.current()
+          let content = UNMutableNotificationContent()
+          content.title = "Pantry Item Expiring"
+          content.body = "\(item.itemName) is expiring soon!"
+          content.sound = UNNotificationSound.default
+
+          // Calculate the notification date based on the item's days and dateAdded
+          let calendar = Calendar.current
+          let expirationDate = calendar.date(byAdding: .day, value: item.days, to: item.dateAdded)!
+        guard let notificationDate = calendar.date(byAdding: .day, value: -1, to: expirationDate) else {
+            // Handle the error condition here, such as logging an error or returning a default value.
+            return
+        }
+
+
+          let components = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: notificationDate)
+
+          let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
+          let request = UNNotificationRequest(identifier: item.id.uuidString, content: content, trigger: trigger)
+
+          center.add(request) { error in
+              if let error = error {
+                  print("Error scheduling notification: \(error)")
+              } else {
+                  print("Notification scheduled for \(item.itemName)")
+              }
+          }
+      }
+    func requestNotificationAuthorization() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+            if success {
+                print("All set!")
+            } else if let error = error {
+                print(error.localizedDescription)
+            }
+        }
+    }
 
     var body: some View {
+        
         NavigationView {
             ZStack{
                 VStack {
@@ -103,18 +200,29 @@ struct ContentView: View {
                     .navigationBarTitle("Add Item")
                     .navigationBarTitleDisplayMode(.inline)
                     Button(action: {
+                        requestNotificationAuthorization()
+
                         shouldCommit = true
                         if shouldCommit {
                             self.presentationMode.wrappedValue.dismiss()
                             switch selectedOption {
                             case 0:
-                                dataFreezerItems.addItem(item: FreezerItem(emoji: generateEmoji(foodName:enteredName), itemName: enteredName, dateAdded: selectedDate, days: generateExpirationDays(foodName: enteredName.lowercased(), foodStorage: "Freezer")))
+                                let freezerItem = FreezerItem(emoji: generateEmoji(foodName: enteredName), itemName: enteredName, dateAdded: selectedDate, days: generateExpirationDays(foodName: enteredName.lowercased(), foodStorage: "Freezer"))
+
+                                dataFreezerItems.addItem(item: freezerItem)
+                                scheduleNotificationsFreezer(item: freezerItem)
                                 
                             case 1:
-                                dataFridgeItems.addItem(item: FridgeItem(emoji:  generateEmoji(foodName:enteredName), itemName: enteredName, dateAdded: selectedDate, days: generateExpirationDays(foodName: enteredName.lowercased(), foodStorage: "Refrigerator")))
+                               let fridgeItem =  FridgeItem(emoji:  generateEmoji(foodName:enteredName), itemName: enteredName, dateAdded: selectedDate, days: generateExpirationDays(foodName: enteredName.lowercased(), foodStorage: "Refrigerator"))
+                                
+                                dataFridgeItems.addItem(item: fridgeItem)
+                                scheduleNotificationsFridge(item: fridgeItem)
                                 
                             case 2:
-                                dataPantryItems.addItem(item: PantryItem(emoji:  generateEmoji(foodName:enteredName), itemName: enteredName, dateAdded: selectedDate, days: generateExpirationDays(foodName: enteredName.lowercased(), foodStorage: "Pantry")))
+                               let pantryItem = PantryItem(emoji:  generateEmoji(foodName:enteredName), itemName: enteredName, dateAdded: selectedDate, days: generateExpirationDays(foodName: enteredName.lowercased(), foodStorage: "Pantry"))
+                                
+                                dataPantryItems.addItem(item: pantryItem)
+                                scheduleNotificationsPantry(item: pantryItem)
                             default:
                                 print("default")
                             }
@@ -132,7 +240,9 @@ struct ContentView: View {
                     .offset(CGSize(width: 10.0, height: 10.0))
                 }
             }
+       
         }
+    
     }
     
     struct ContentView_Previews: PreviewProvider {
