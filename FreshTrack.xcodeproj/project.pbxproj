@@ -22,6 +22,10 @@
 		BC71A21C2ACD1E7700FE413E /* PantryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A21B2ACD1E7700FE413E /* PantryItem.swift */; };
 		BC71A21E2ACD1E9C00FE413E /* DataPantryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A21D2ACD1E9C00FE413E /* DataPantryItem.swift */; };
 		BC71A2202ACD1EED00FE413E /* PantryListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A21F2ACD1EED00FE413E /* PantryListRow.swift */; };
+		CD29B8252AD9AF000015C885 /* RecipeAdvancedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD29B8242AD9AF000015C885 /* RecipeAdvancedView.swift */; };
+		CD29B8272AD9B8670015C885 /* GenerateRecipeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD29B8262AD9B8670015C885 /* GenerateRecipeImage.swift */; };
+		CD29B82D2AD9BE840015C885 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = CD29B82C2AD9BE840015C885 /* URLImage */; };
+		CD29B82F2AD9BE840015C885 /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = CD29B82E2AD9BE840015C885 /* URLImageStore */; };
 		CD6E3D682AD2898D00116ED1 /* FreezerAdvancedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6E3D672AD2898D00116ED1 /* FreezerAdvancedView.swift */; };
 		CD6E3D6A2AD28A2C00116ED1 /* CountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6E3D692AD28A2C00116ED1 /* CountdownTimer.swift */; };
 		CD6E3D6C2AD28EB200116ED1 /* FridgeAdvancedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6E3D6B2AD28EB200116ED1 /* FridgeAdvancedView.swift */; };
@@ -31,11 +35,6 @@
 		CD6E3D772AD53AAD00116ED1 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6E3D762AD53AAD00116ED1 /* Credentials.swift */; };
 		CD6E3D792AD53B1800116ED1 /* OpenAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6E3D782AD53B1800116ED1 /* OpenAIService.swift */; };
 		CD6E3D7C2AD53BF200116ED1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CD6E3D7B2AD53BF200116ED1 /* Alamofire */; };
-		CD6E3D832AD71E8A00116ED1 /* SwiftBasicFormat in Frameworks */ = {isa = PBXBuildFile; productRef = CD6E3D822AD71E8A00116ED1 /* SwiftBasicFormat */; };
-		CD6E3D852AD71E8A00116ED1 /* SwiftCompilerPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = CD6E3D842AD71E8A00116ED1 /* SwiftCompilerPlugin */; };
-		CD6E3D872AD71E8A00116ED1 /* SwiftCompilerPluginMessageHandling in Frameworks */ = {isa = PBXBuildFile; productRef = CD6E3D862AD71E8A00116ED1 /* SwiftCompilerPluginMessageHandling */; };
-		CD6E3D892AD71E8A00116ED1 /* SwiftDiagnostics in Frameworks */ = {isa = PBXBuildFile; productRef = CD6E3D882AD71E8A00116ED1 /* SwiftDiagnostics */; };
-		CD6E3D8B2AD71E8A00116ED1 /* SwiftIDEUtils in Frameworks */ = {isa = PBXBuildFile; productRef = CD6E3D8A2AD71E8A00116ED1 /* SwiftIDEUtils */; };
 		CD921BF12AD0630100D2805C /* nameToEmojiModel.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = CD921BF02AD0630100D2805C /* nameToEmojiModel.mlpackage */; };
 		CDFEF6312ACD5F470082AD08 /* AddItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFEF6302ACD5F470082AD08 /* AddItem.swift */; };
 		CDFEF6362ACDBD410082AD08 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFEF6352ACDBD410082AD08 /* Functions.swift */; };
@@ -58,6 +57,8 @@
 		BC71A21B2ACD1E7700FE413E /* PantryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryItem.swift; sourceTree = "<group>"; };
 		BC71A21D2ACD1E9C00FE413E /* DataPantryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPantryItem.swift; sourceTree = "<group>"; };
 		BC71A21F2ACD1EED00FE413E /* PantryListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryListRow.swift; sourceTree = "<group>"; };
+		CD29B8242AD9AF000015C885 /* RecipeAdvancedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeAdvancedView.swift; sourceTree = "<group>"; };
+		CD29B8262AD9B8670015C885 /* GenerateRecipeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateRecipeImage.swift; sourceTree = "<group>"; };
 		CD6E3D672AD2898D00116ED1 /* FreezerAdvancedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreezerAdvancedView.swift; sourceTree = "<group>"; };
 		CD6E3D692AD28A2C00116ED1 /* CountdownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTimer.swift; sourceTree = "<group>"; };
 		CD6E3D6B2AD28EB200116ED1 /* FridgeAdvancedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FridgeAdvancedView.swift; sourceTree = "<group>"; };
@@ -77,12 +78,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD6E3D832AD71E8A00116ED1 /* SwiftBasicFormat in Frameworks */,
+				CD29B82D2AD9BE840015C885 /* URLImage in Frameworks */,
+				CD29B82F2AD9BE840015C885 /* URLImageStore in Frameworks */,
 				CD6E3D7C2AD53BF200116ED1 /* Alamofire in Frameworks */,
-				CD6E3D852AD71E8A00116ED1 /* SwiftCompilerPlugin in Frameworks */,
-				CD6E3D8B2AD71E8A00116ED1 /* SwiftIDEUtils in Frameworks */,
-				CD6E3D892AD71E8A00116ED1 /* SwiftDiagnostics in Frameworks */,
-				CD6E3D872AD71E8A00116ED1 /* SwiftCompilerPluginMessageHandling in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +115,7 @@
 				BC71A1FA2ACBAEB400FE413E /* Assets.xcassets */,
 				BC71A1FC2ACBAEB400FE413E /* Preview Content */,
 				CDFEF6352ACDBD410082AD08 /* Functions.swift */,
+				CD29B8262AD9B8670015C885 /* GenerateRecipeImage.swift */,
 				CD921BF02AD0630100D2805C /* nameToEmojiModel.mlpackage */,
 				CD6E3D6F2AD2903B00116ED1 /* foodExpirationDate_Model_v4.mlmodel */,
 				BC545D862AD37940006BBC8C /* AutoCompleteTerms.swift */,
@@ -153,6 +152,7 @@
 				CDFEF6302ACD5F470082AD08 /* AddItem.swift */,
 				BC71A2082ACBAFB100FE413E /* ItemsListView.swift */,
 				CD6E3D672AD2898D00116ED1 /* FreezerAdvancedView.swift */,
+				CD29B8242AD9AF000015C885 /* RecipeAdvancedView.swift */,
 				CD6E3D6B2AD28EB200116ED1 /* FridgeAdvancedView.swift */,
 				CD6E3D6D2AD28EC000116ED1 /* PantryAdvancedView.swift */,
 				CD6E3D692AD28A2C00116ED1 /* CountdownTimer.swift */,
@@ -189,11 +189,8 @@
 			name = FreshTrack;
 			packageProductDependencies = (
 				CD6E3D7B2AD53BF200116ED1 /* Alamofire */,
-				CD6E3D822AD71E8A00116ED1 /* SwiftBasicFormat */,
-				CD6E3D842AD71E8A00116ED1 /* SwiftCompilerPlugin */,
-				CD6E3D862AD71E8A00116ED1 /* SwiftCompilerPluginMessageHandling */,
-				CD6E3D882AD71E8A00116ED1 /* SwiftDiagnostics */,
-				CD6E3D8A2AD71E8A00116ED1 /* SwiftIDEUtils */,
+				CD29B82C2AD9BE840015C885 /* URLImage */,
+				CD29B82E2AD9BE840015C885 /* URLImageStore */,
 			);
 			productName = FreshTrack;
 			productReference = BC71A1F32ACBAEB300FE413E /* FreshTrack.app */;
@@ -224,9 +221,8 @@
 			);
 			mainGroup = BC71A1EA2ACBAEB300FE413E;
 			packageReferences = (
-				CD6E3D732AD3FCB000116ED1 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
 				CD6E3D7A2AD53BF200116ED1 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				CD6E3D812AD71E8A00116ED1 /* XCRemoteSwiftPackageReference "swift-syntax" */,
+				CD29B82B2AD9BE840015C885 /* XCRemoteSwiftPackageReference "url-image" */,
 			);
 			productRefGroup = BC71A1F42ACBAEB300FE413E /* Products */;
 			projectDirPath = "";
@@ -270,12 +266,14 @@
 				BC71A21A2ACD1C1C00FE413E /* FridgeListRow.swift in Sources */,
 				CD6E3D682AD2898D00116ED1 /* FreezerAdvancedView.swift in Sources */,
 				BC71A1F72ACBAEB300FE413E /* FreshTrackApp.swift in Sources */,
+				CD29B8272AD9B8670015C885 /* GenerateRecipeImage.swift in Sources */,
 				CDFEF6362ACDBD410082AD08 /* Functions.swift in Sources */,
 				CD6E3D772AD53AAD00116ED1 /* Credentials.swift in Sources */,
 				BC71A2092ACBAFB100FE413E /* ItemsListView.swift in Sources */,
 				BC545D872AD37940006BBC8C /* AutoCompleteTerms.swift in Sources */,
 				BC71A2202ACD1EED00FE413E /* PantryListRow.swift in Sources */,
 				BC71A21C2ACD1E7700FE413E /* PantryItem.swift in Sources */,
+				CD29B8252AD9AF000015C885 /* RecipeAdvancedView.swift in Sources */,
 				BC71A2072ACBAF7500FE413E /* MainNavBar.swift in Sources */,
 				BC71A21E2ACD1E9C00FE413E /* DataPantryItem.swift in Sources */,
 			);
@@ -486,12 +484,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CD6E3D732AD3FCB000116ED1 /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+		CD29B82B2AD9BE840015C885 /* XCRemoteSwiftPackageReference "url-image" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/adamrushy/OpenAISwift";
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.4.1;
+				minimumVersion = 3.1.1;
 			};
 		};
 		CD6E3D7A2AD53BF200116ED1 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
@@ -502,46 +500,23 @@
 				minimumVersion = 5.8.0;
 			};
 		};
-		CD6E3D812AD71E8A00116ED1 /* XCRemoteSwiftPackageReference "swift-syntax" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apple/swift-syntax.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 509.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CD29B82C2AD9BE840015C885 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD29B82B2AD9BE840015C885 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+		CD29B82E2AD9BE840015C885 /* URLImageStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD29B82B2AD9BE840015C885 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImageStore;
+		};
 		CD6E3D7B2AD53BF200116ED1 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CD6E3D7A2AD53BF200116ED1 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		CD6E3D822AD71E8A00116ED1 /* SwiftBasicFormat */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CD6E3D812AD71E8A00116ED1 /* XCRemoteSwiftPackageReference "swift-syntax" */;
-			productName = SwiftBasicFormat;
-		};
-		CD6E3D842AD71E8A00116ED1 /* SwiftCompilerPlugin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CD6E3D812AD71E8A00116ED1 /* XCRemoteSwiftPackageReference "swift-syntax" */;
-			productName = SwiftCompilerPlugin;
-		};
-		CD6E3D862AD71E8A00116ED1 /* SwiftCompilerPluginMessageHandling */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CD6E3D812AD71E8A00116ED1 /* XCRemoteSwiftPackageReference "swift-syntax" */;
-			productName = SwiftCompilerPluginMessageHandling;
-		};
-		CD6E3D882AD71E8A00116ED1 /* SwiftDiagnostics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CD6E3D812AD71E8A00116ED1 /* XCRemoteSwiftPackageReference "swift-syntax" */;
-			productName = SwiftDiagnostics;
-		};
-		CD6E3D8A2AD71E8A00116ED1 /* SwiftIDEUtils */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CD6E3D812AD71E8A00116ED1 /* XCRemoteSwiftPackageReference "swift-syntax" */;
-			productName = SwiftIDEUtils;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
