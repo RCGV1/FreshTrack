@@ -43,39 +43,48 @@ func displayImage(from result: Result<String, ImageURLError>, isAdvanced: Bool) 
 }
 
 struct RecipeAdvancedView: View {
-
     var recipe: Recipe
-        var body: some View {
-            ScrollView {
-                VStack {
-                    let resultOfImageSearch = getImageURL(for: recipe.title)
-                    displayImage(from: resultOfImageSearch, isAdvanced: true)
-                    Spacer()
-                    Text("Ingredients:")
-                        .font(.title)
-                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                        .padding()
-                    ForEach(recipe.ingredients, id: \.self) { ingredient in
-                        Text("- \(ingredient)")
-                            .padding(.leading, 20)
-                    }
-                    Text("Instructions:")
-                        .font(.title)
-                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                        .padding()
-                    
-                    Text(recipe.instructions)
-                        .font(.body)
-                        .padding(10)
-                        .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
-                        .aspectRatio(contentMode: .fit)
-                    
+
+    var body: some View {
+        ScrollView {
+            VStack {
+                // Display the recipe image
+                let resultOfImageSearch = getImageURL(for: recipe.title)
+                displayImage(from: resultOfImageSearch, isAdvanced: true)
+                Spacer()
+                
+                // Ingredients Section
+                Text("Ingredients:")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .padding()
+                
+                ForEach(recipe.ingredients, id: \.self) { ingredient in
+                    Text("- \(ingredient)")
+                        .padding(.leading, 20)
                 }
-                .navigationTitle(recipe.title)
+                
+                // Instructions Section
+                Text("Instructions:")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .padding()
+                
+                Text(recipe.instructions)
+                    .font(.body)
+                     .padding(10)
+                     .multilineTextAlignment(.center)
+                     .frame(width: 300)
             }
+            .navigationTitle(recipe.title)
         }
+    }
 }
 
-#Preview {
-    RecipeAdvancedView(recipe: Recipe(id: 1, title: "pizza", ingredients: ["Ingredient 1", "Ingredient 2"], instructions: "Sample instructionsdsfkjdbsfksjdbfskfjbsdfkjhdsbfjksdhbdfjkhbgdsjhkbdfgjhbsdfgkjhbsdfgjkhbsdgjkhbsdfgjhkbdsfgjkhdsbfgjhdsfbgjkshfbgdskjhbsdfjkhbdsfjkhbdfgjkhbfgjkhbdsgjhbsdfgjkhbsdfgjkhbsfdgjhsbdfgjksdhbgskdjfhgfydberugyfesbdjhbsdfkgjhsdbfgkjsdhfbgsdkfjghbsdfgksjdhfglsdfjhgbsdflgjbhjhfbdgljdhsfbgfd"))
+// Preview
+struct RecipeAdvancedView_Previews: PreviewProvider {
+    static var previews: some View {
+        RecipeAdvancedView(recipe: Recipe(id: 1, title: "Pizza", ingredients: ["Ingredient 1", "Ingredient 2"], instructions: "To do this you have to make this and then this and then this and then this and then this"))
+    }
 }
+
