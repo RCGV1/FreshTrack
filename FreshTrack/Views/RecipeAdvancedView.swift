@@ -18,22 +18,26 @@ func displayImage(from result: Result<String, ImageURLError>, isAdvanced: Bool) 
                 case .success(let image):
                     if isAdvanced {
                         image
+                            .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: 200, height: 200) } else {
+                            .frame(width: 1000, height: 300)
+                            .brightness(-0.05)
+                        
+                    } else {
                                 image
                                     .aspectRatio(contentMode: .fit)
-                                    .frame(width: 20, height: 20)
+                                    .frame(width: 50, height: 50)
                         }
                 case .failure:
-                    Text("Failed to load image")
+                    Text("")
                 @unknown default:
-                    Text("Unknown state")
+                    Text("")
                 }
             }
         )
-    case .failure(let error):
+    case .failure:
         return AnyView(
-            Text("Failed to get image URL: \(error.localizedDescription)")
+            Text("")
         )
     }
 }
@@ -42,29 +46,36 @@ struct RecipeAdvancedView: View {
 
     var recipe: Recipe
         var body: some View {
-            VStack {
-                Text("Ingredients:")
-                    .font(.headline)
-                    .padding(.bottom, 5)
-                ForEach(recipe.ingredients, id: \.self) { ingredient in
-                    Text("- \(ingredient)")
-                        .padding(.leading, 20)
+            ScrollView {
+                VStack {
+                    let resultOfImageSearch = getImageURL(for: recipe.title)
+                    displayImage(from: resultOfImageSearch, isAdvanced: true)
+                    Spacer()
+                    Text("Ingredients:")
+                        .font(.title)
+                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                        .padding()
+                    ForEach(recipe.ingredients, id: \.self) { ingredient in
+                        Text("- \(ingredient)")
+                            .padding(.leading, 20)
+                    }
+                    Text("Instructions:")
+                        .font(.title)
+                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                        .padding()
+                    
+                    Text(recipe.instructions)
+                        .font(.body)
+                        .padding(10)
+                        .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
+                        .aspectRatio(contentMode: .fit)
+                    
                 }
-                let resultOfImageSearch = getImageURL(for: recipe.title)
-                displayImage(from: resultOfImageSearch, isAdvanced: true)
-
-                Text("Instructions:")
-                    .font(.headline)
-                    .padding(.bottom, 5)
-                Text(recipe.instructions)
-                    .padding()
-
-                Spacer()
+                .navigationTitle(recipe.title)
             }
-            .navigationTitle(recipe.title)
         }
 }
 
 #Preview {
-    RecipeAdvancedView(recipe: Recipe(id: 1, title: "pizza", ingredients: ["Ingredient 1", "Ingredient 2"], instructions: "Sample instructions"))
+    RecipeAdvancedView(recipe: Recipe(id: 1, title: "pizza", ingredients: ["Ingredient 1", "Ingredient 2"], instructions: "Sample instructionsdsfkjdbsfksjdbfskfjbsdfkjhdsbfjksdhbdfjkhbgdsjhkbdfgjhbsdfgkjhbsdfgjkhbsdgjkhbsdfgjhkbdsfgjkhdsbfgjhdsfbgjkshfbgdskjhbsdfjkhbdsfjkhbdfgjkhbfgjkhbdsgjhbsdfgjkhbsdfgjkhbsfdgjhsbdfgjksdhbgskdjfhgfydberugyfesbdjhbsdfkgjhsdbfgkjsdhfbgsdkfjghbsdfgksjdhfglsdfjhgbsdflgjbhjhfbdgljdhsfbgfd"))
 }
