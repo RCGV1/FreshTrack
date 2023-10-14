@@ -7,7 +7,7 @@ class OpenAIService {
     var response: String = ""
     
     func sendRequest(message: String, completion: @escaping (String) -> Void) {
-        let body = OpenAICompletionsBody(prompt: message, max_tokens: 500) // Adjust max_tokens as needed
+        let body = OpenAICompletionsBody(prompt: message, max_tokens: 1000, temperature: 0.0) // Adjust max_tokens as needed
 
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(Credentials.openaiApiKey)"
@@ -31,6 +31,7 @@ class OpenAIService {
 struct OpenAICompletionsBody: Encodable {
     let prompt: String
     let max_tokens: Int
+    let temperature: Double
 }
 
 struct ResponseModel: Decodable {
