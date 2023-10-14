@@ -35,7 +35,6 @@ struct RecipeView: View {
     @EnvironmentObject var dataFridgeItems: DataFridgeItems
     @EnvironmentObject var dataPantryItems: DataPantryItems
     @State private var generatedText = ""
-    @State private var buttonClicked = false
     let openAIService = OpenAIService()
     
     var body: some View {
@@ -67,23 +66,16 @@ struct RecipeView: View {
 //                        .offset(y: -500)
 //                } else {
                     Button(action: {
-                        buttonClicked = true
                         let ingredients = "\(dataFreezerItems.items) \(dataFridgeItems.items) \(dataPantryItems.items)"
                         openAIService.sendRequest(message: """
                         Generate 2 easy to make recipes made of the following ingredients: \(ingredients). Please generate a single JSON object with the following structure: {"id": integer starting from 1 depending on the recipe number, "title": "title of the recipe", "ingredients": [ingredient 1, ingredient 2, ingredient 3,etc], "instructions":"instructions on the recipe"}. Wrap all of the recipes in an array to make it a single JSON object.
                     """) { text in
                             generatedText = text
                         }
-                        buttonClicked = false
                     }) {
                         HStack{
-                            if buttonClicked {
-                                ProgressView("Loading")
-                                    .progressViewStyle(CircularProgressViewStyle(tint: Color.accentColor))
-                            } else {
                                 Text("Generate Recipes")
                                 Image(systemName: "fork.knife")
-                            }
                         }
                         .padding()
                         .foregroundColor(.white)
