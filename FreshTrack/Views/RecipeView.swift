@@ -42,6 +42,7 @@ struct RecipeView: View {
         NavigationView {
             VStack {
                 HStack {
+                    
                     Text("Recipes")
                         .font(.largeTitle)
                         .fontWeight(.bold)
@@ -62,10 +63,10 @@ struct RecipeView: View {
                         }
                     }
                 }
-//                if (dataFridgeItems.items.isEmpty && dataPantryItems.items.isEmpty && dataFreezerItems.items.isEmpty){
-//                    Text("There are no items yet")
-//                        .offset(y: -500)
-//                } else {
+                if (dataFridgeItems.items.isEmpty && dataPantryItems.items.isEmpty && dataFreezerItems.items.isEmpty){
+                    Text("There are no items yet")
+                        .offset(y: -500)
+                } else {
                     Button(action: {
                         buttonClicked = true
                         let ingredients = "\(dataFreezerItems.items) \(dataFridgeItems.items) \(dataPantryItems.items)"
@@ -99,7 +100,7 @@ struct RecipeView: View {
             }
             }
         }
-//    }
+    }
 
 
 struct RecipeView_Previews: PreviewProvider {

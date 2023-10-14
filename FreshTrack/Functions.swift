@@ -15,14 +15,76 @@ func calculateExpirationDate(daysRemaining: Int) -> String? {
     }
 }
 
+let foodEmojiDictionary = [
+    "pizza": "🍕",
+    "burger": "🍔",
+    "taco": "🌮",
+    "sushi": "🍣",
+    "ice cream": "🍦",
+    "spaghetti": "🍝",
+    "hot dog": "🌭",
+    "french fries": "🍟",
+    "popcorn": "🍿",
+    "chicken": "🍗",
+    "burrito": "🌯",
+    "pancakes": "🥞",
+    "donut": "🍩",
+    "soda": "🥤",
+    "shrimp": "🍤",
+    "sandwich": "🥪",
+    "milk": "🥛",
+    "yogurt": "🥛",
+    "cheese": "🧀",
+    "croissant": "🥐",
+    "baguette": "🥖",
+    "cupcake": "🧁",
+    "hamburger": "🍔",
+    "cofee": "☕",
+    "bento box": "🍱",
+    "chocolate": "🍫",
+    "potato": "🥔",
+    "carrot": "🥕",
+    "peach": "🍑",
+    "strawberry": "🍓",
+    "watermelon": "🍉",
+    "apple": "🍎",
+    "banana": "🍌",
+    "grapes": "🍇",
+    "lemon": "🍋",
+    "pineapple": "🍍",
+    "avocado": "🥑",
+    "kiwi": "🥝",
+    "cherries": "🍒",
+    "pear": "🍐",
+    "sake": "🍶",
+    "wine": "🍷",
+    "beer": "🍺",
+    "cocktail": "🍸",
+    "drink": "🍹",
+    "chinese": "🥡",
+    "egg": "🥚",
+    "tomato": "🍅",
+    "canned": "🥫",
+    "beef": "🥩",
+    "meat": "🥩",
+    "bell pepper": "🫑",
+    "sausage": "🌭",
+    "sprout": "🌱",
+    "pasta": "🍝"
+    
+]
 
 func generateEmoji(foodName: String) -> String {
-    do {
-        let model = try nameToEmoji__v2(configuration: MLModelConfiguration())
-        let inputFeatures = nameToEmoji__v2Input(Food_Name: foodName)
-        let prediction = try model.prediction(input: inputFeatures)
-        return prediction.Emoji
-    } catch {
-        return "🍽"
+
+    let lowercaseFoodName = foodName.lowercased()
+    for (food, emoji) in foodEmojiDictionary {
+        if lowercaseFoodName.contains(food) {
+            return emoji
+        }
     }
+return "🍽️"
 }
+
+
+
+

@@ -62,6 +62,8 @@ struct RecipeAdvancedView: View {
                 ForEach(recipe.ingredients, id: \.self) { ingredient in
                     Text("- \(ingredient)")
                         .padding(.leading, 20)
+                        .multilineTextAlignment(.center)
+                        .frame(width: 350)
                 }
                 
                 // Instructions Section
@@ -74,7 +76,7 @@ struct RecipeAdvancedView: View {
                     .font(.body)
                      .padding(10)
                      .multilineTextAlignment(.center)
-                     .frame(width: 300)
+                     .frame(width: 350)
             }
             .navigationTitle(recipe.title)
         }
