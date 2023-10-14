@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC00E2EB2ADA265D00F240AA /* nameToEmoji  v2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = BC00E2EA2ADA265D00F240AA /* nameToEmoji  v2.mlmodel */; };
 		BC545D872AD37940006BBC8C /* AutoCompleteTerms.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC545D862AD37940006BBC8C /* AutoCompleteTerms.swift */; };
 		BC71A1F72ACBAEB300FE413E /* FreshTrackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71A1F62ACBAEB300FE413E /* FreshTrackApp.swift */; };
 		BC71A1FB2ACBAEB400FE413E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC71A1FA2ACBAEB400FE413E /* Assets.xcassets */; };
@@ -35,12 +36,12 @@
 		CD6E3D772AD53AAD00116ED1 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6E3D762AD53AAD00116ED1 /* Credentials.swift */; };
 		CD6E3D792AD53B1800116ED1 /* OpenAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6E3D782AD53B1800116ED1 /* OpenAIService.swift */; };
 		CD6E3D7C2AD53BF200116ED1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CD6E3D7B2AD53BF200116ED1 /* Alamofire */; };
-		CD921BF12AD0630100D2805C /* nameToEmojiModel.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = CD921BF02AD0630100D2805C /* nameToEmojiModel.mlpackage */; };
 		CDFEF6312ACD5F470082AD08 /* AddItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFEF6302ACD5F470082AD08 /* AddItem.swift */; };
 		CDFEF6362ACDBD410082AD08 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFEF6352ACDBD410082AD08 /* Functions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC00E2EA2ADA265D00F240AA /* nameToEmoji  v2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "nameToEmoji  v2.mlmodel"; sourceTree = "<group>"; };
 		BC545D862AD37940006BBC8C /* AutoCompleteTerms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoCompleteTerms.swift; sourceTree = "<group>"; };
 		BC71A1F32ACBAEB300FE413E /* FreshTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreshTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC71A1F62ACBAEB300FE413E /* FreshTrackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshTrackApp.swift; sourceTree = "<group>"; };
@@ -67,7 +68,6 @@
 		CD6E3D712AD3C9C900116ED1 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		CD6E3D762AD53AAD00116ED1 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		CD6E3D782AD53B1800116ED1 /* OpenAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
-		CD921BF02AD0630100D2805C /* nameToEmojiModel.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = nameToEmojiModel.mlpackage; sourceTree = "<group>"; };
 		CDFEF6302ACD5F470082AD08 /* AddItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItem.swift; sourceTree = "<group>"; };
 		CDFEF6342ACD808F0082AD08 /* misc.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = misc.md; sourceTree = "<group>"; };
 		CDFEF6352ACDBD410082AD08 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 				BC71A1FC2ACBAEB400FE413E /* Preview Content */,
 				CDFEF6352ACDBD410082AD08 /* Functions.swift */,
 				CD29B8262AD9B8670015C885 /* GenerateRecipeImage.swift */,
-				CD921BF02AD0630100D2805C /* nameToEmojiModel.mlpackage */,
+				BC00E2EA2ADA265D00F240AA /* nameToEmoji  v2.mlmodel */,
 				CD6E3D6F2AD2903B00116ED1 /* foodExpirationDate_Model_v4.mlmodel */,
 				BC545D862AD37940006BBC8C /* AutoCompleteTerms.swift */,
 				CD6E3D762AD53AAD00116ED1 /* Credentials.swift */,
@@ -257,12 +257,12 @@
 				CD6E3D722AD3C9C900116ED1 /* RecipeView.swift in Sources */,
 				CD6E3D6C2AD28EB200116ED1 /* FridgeAdvancedView.swift in Sources */,
 				BC71A2182ACD1B5E00FE413E /* DataFridgeItem.swift in Sources */,
+				BC00E2EB2ADA265D00F240AA /* nameToEmoji  v2.mlmodel in Sources */,
 				BC71A2122ACBB45100FE413E /* FreezerListRow.swift in Sources */,
 				BC71A20B2ACBB2AA00FE413E /* FreezerItem.swift in Sources */,
 				BC71A20D2ACBB35900FE413E /* DataFreezerItems.swift in Sources */,
 				CD6E3D702AD2903B00116ED1 /* foodExpirationDate_Model_v4.mlmodel in Sources */,
 				CD6E3D792AD53B1800116ED1 /* OpenAIService.swift in Sources */,
-				CD921BF12AD0630100D2805C /* nameToEmojiModel.mlpackage in Sources */,
 				BC71A21A2ACD1C1C00FE413E /* FridgeListRow.swift in Sources */,
 				CD6E3D682AD2898D00116ED1 /* FreezerAdvancedView.swift in Sources */,
 				BC71A1F72ACBAEB300FE413E /* FreshTrackApp.swift in Sources */,
