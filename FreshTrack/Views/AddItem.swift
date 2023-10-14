@@ -239,6 +239,7 @@ struct ContentView: View {
                     }
                     .offset(CGSize(width: 10.0, height: 10.0))
                 }
+            .ignoresSafeArea(.keyboard)
             }
        
         }

@@ -40,9 +40,15 @@ struct RecipeView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("Recipes")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
+                HStack {
+                    Text("Recipes")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                    Spacer()
+                
+                    
+                }
+                .padding()
                 
                 List(parseRecipes(from: generatedText) ?? []) { recipe in
                     NavigationLink(destination: RecipeAdvancedView(recipe: recipe)) {
@@ -55,18 +61,38 @@ struct RecipeView: View {
                         }
                     }
                 }
-                Button("generate recipes") {
-                    let ingredients = "\(dataFreezerItems.items) \(dataFridgeItems.items) \(dataPantryItems.items)"
-                    openAIService.sendRequest(message: """
-                                              Generate 2 easy to make recipes made of the following ingredients: \(ingredients). Please generate a single JSON object with the following structure: {"id": integer tarting from 1 dpending on the recipe number, "title": "title of the recipe", "ingredients": [ingredient 1, ingredient 2, ingredient 3,etc], "instrucions":"instructions on the recipe"}. Wrap all of the recipes in an array to make it a single json object.
-                                            """) { text in
-                        generatedText = text
+                if (dataFridgeItems.items.isEmpty && dataPantryItems.items.isEmpty && dataFreezerItems.items.isEmpty){
+                    Text("There are no items yet")
+                        .offset(y: -500)
+                } else {
+                    Button(action: {
+                        let ingredients = "\(dataFreezerItems.items) \(dataFridgeItems.items) \(dataPantryItems.items)"
+                        openAIService.sendRequest(message: """
+                        Generate 2 easy to make recipes made of the following ingredients: \(ingredients). Please generate a single JSON object with the following structure: {"id": integer starting from 1 depending on the recipe number, "title": "title of the recipe", "ingredients": [ingredient 1, ingredient 2, ingredient 3,etc], "instructions":"instructions on the recipe"}. Wrap all of the recipes in an array to make it a single JSON object.
+                    """) { text in
+                            generatedText = text
+                        }
+                    }) {
+                        HStack{
+                            Text("Generate Recipes")
+                            Image(systemName: "fork.knife")
+                        }
+                        .padding()
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.accentColor)
+                        .cornerRadius(10)
+                        .shadow(radius: 5)
                     }
+                    .offset(y: -50)
+                    
+                    
                 }
+            }
             }
         }
     }
-}
+
 
 struct RecipeView_Previews: PreviewProvider {
     static var previews: some View {

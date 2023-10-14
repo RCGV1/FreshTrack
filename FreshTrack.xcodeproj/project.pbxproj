@@ -112,7 +112,6 @@
 				BC71A2052ACBAF3900FE413E /* Views */,
 				BC71A1F62ACBAEB300FE413E /* FreshTrackApp.swift */,
 				BC71A2062ACBAF7500FE413E /* MainNavBar.swift */,
-				BC71A1FA2ACBAEB400FE413E /* Assets.xcassets */,
 				BC71A1FC2ACBAEB400FE413E /* Preview Content */,
 				CDFEF6352ACDBD410082AD08 /* Functions.swift */,
 				CD29B8262AD9B8670015C885 /* GenerateRecipeImage.swift */,
@@ -121,6 +120,7 @@
 				BC545D862AD37940006BBC8C /* AutoCompleteTerms.swift */,
 				CD6E3D762AD53AAD00116ED1 /* Credentials.swift */,
 				CD6E3D782AD53B1800116ED1 /* OpenAIService.swift */,
+				BC71A1FA2ACBAEB400FE413E /* Assets.xcassets */,
 			);
 			path = FreshTrack;
 			sourceTree = "<group>";

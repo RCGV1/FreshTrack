@@ -29,7 +29,7 @@ struct MainNavBar: View {
                 .environmentObject(dataFridgeItems)
                 .environmentObject(dataPantryItems)
                 .tabItem {
-                    Image(systemName: "carrot")
+                    Image(systemName: "fork.knife")
                     Text("Recipes")
                 }
         }
