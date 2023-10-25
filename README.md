@@ -1,3 +1,10 @@
+# Fresh Track 🥕
+[![Made With](https://skillicons.dev/icons?i=swift)](https://skillicons.dev)  
+## How to test Fresh Track
+1. Clone the project
+2. Open it in Xcode
+3. Run a simulator
+
 ## Inspiration
 Just in the United States 119 billion pounds of food is wasted yearly. Most food in the USA either has inaccurate food expiration labels or has no labels at all. Our app can improve the sustainability habits of its users and help them avoid incorrectly disposing of food that is perfectly fine. 
 
